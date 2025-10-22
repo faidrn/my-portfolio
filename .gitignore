@@ -1,3 +1,33 @@
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# =========================================
+# ⚙️  BASE - Node / React / TailwindCSS
+# =========================================
+
+# Dependencias de Node
+node_modules/
+
+# Build de producción
+dist-ssr
+dist/
+build/
+*.local
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
 # Logs
 logs
 *.log
@@ -7,18 +37,92 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Archivos temporales del sistema
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# =========================================
+# 💨  TailwindCSS / PostCSS / Autoprefixer
+# =========================================
+# Cachés de PostCSS o Tailwind
+.postcss-cache/
+tailwind.config.js.timestamp-*
+*.css.map
+
+# =========================================
+# 🧱  Herramientas de Build (Vite / Webpack)
+# =========================================
+.cache/
+.vite/
+vite.config.timestamp-*
+
+# Webpack / Babel
+webpack.config.js.timestamp-*
+.babelrc
+.babelrc.js
+babel.config.js
+*.tsbuildinfo
+
+# =========================================
+# 🧩  VS Code / IDEs / Configuración Local
+# =========================================
+# Configuración del editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Archivos específicos de IntelliJ/WebStorm
+.idea/
+*.iml
+
+# =========================================
+# 🧪  Testing / Linting / Coverage
+# =========================================
+coverage/
+.nyc_output/
+jest/
+*.log
+*.spec.js
+*.test.js
+*.test.jsx
+*.test.ts
+*.test.tsx
+
+# ESLint / Prettier caches
+.eslintcache
+.prettierignore
+.prettiercache
+
+# =========================================
+# 📦  Otros archivos de desarrollo
+# =========================================
+# Archivos temporales del sistema operativo
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+# Archivos de bloqueo (según gestor de paquetes)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# =========================================
+# 🔧  Configuración del proyecto / Documentación
+# =========================================
+# Archivos generados por herramientas o AI
+__generated__/
+__snapshots__/
+docs-temp/
+designs/
+drafts/
+
+# =========================================
+# 🧠  Archivos personales
+# =========================================
+# Notas o configuraciones personales
+notes.txt
+todo.md
+private/
+.personal/
