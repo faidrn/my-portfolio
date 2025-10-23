@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { motion } from 'motion/react'; {/* Biblioteca de animaciones */}
+// motion: Biblioteca de animaciones 
+import { motion } from 'framer-motion'; 
 import { useLanguage } from '../../contexts/LanguageContext';
-import { Menu, X } from 'lucide-react'; {/* Iconos para el menú */}
+// Iconos para el menú (Menu, X) 
+import { Menu, X } from 'lucide-react'; 
 
 
 const Header = () => {
