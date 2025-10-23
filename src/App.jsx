@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Header } from './components/layout/Header.jsx';
+import React,{ useState } from 'react'
+import { LanguageProvider } from './contexts/LanguageContext.jsx';
+import Header from './components/layout/Header';
 //import './App.css'
 
 function App() {
@@ -7,9 +8,11 @@ function App() {
 
   return (
     <>
-      <div className='min-h-screen bg-white'>
-        <Header />
-      </div>
+      <LanguageProvider>
+        <div className='min-h-screen bg-white'>
+          <Header />
+        </div>
+      </LanguageProvider> 
       
     </>
   )

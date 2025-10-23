@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
 // Iconos para el menú (Menu, X) 
 import { Menu, X } from 'lucide-react'; 
+import { LanguageToggle } from '../common/LanguageToggle';
 
 
 const Header = () => {
@@ -50,7 +51,7 @@ const Header = () => {
 
                     { /* Language Toggle and Mobile Menu */ }
                     <div className='flex items-center gap-4'>
-                        <LanguaToggle />
+                        <LanguageToggle />
 
                         <button
                             className='md:hidden text-gray-700'
