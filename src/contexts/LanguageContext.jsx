@@ -14,7 +14,7 @@ const translations = {
         // Hero
         'hero.greeting': "Hi, I'm", 
         'hero.title': 'Frontend Developer',
-        'hero.subtitle': 'I create beatiful and functional web experiences',
+        'hero.subtitle': 'I design and develop web solutions that bring ideas to life',
         'hero.cta': 'View My Work',
         'hero.contact': 'Get in Touch',
 
@@ -85,7 +85,7 @@ const translations = {
         // Hero
         'hero.greeting': "Hola, soy", 
         'hero.title': 'Desarrollador Frontend',
-        'hero.subtitle': 'Creo experiencias web hermosas y funcionales',
+        'hero.subtitle': 'Diseño y desarrollo soluciones web que dan vida a las ideas',
         'hero.cta': 'Ver Mi Trabajo',
         'hero.contact': 'Contáctame',
 
