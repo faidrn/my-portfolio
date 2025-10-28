@@ -7,6 +7,7 @@ import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
 import Resume from './components/sections/Resume';
 import Portfolio from './components/sections/Portfolio';
+import Blog from './components/sections/Blog';
 //import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Services />
             <Resume />
             <Portfolio />
+            <Blog />
           </main>
           <Footer />
         </div>
