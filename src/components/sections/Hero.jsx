@@ -16,7 +16,7 @@ const Hero = () => {
 
     return (
         <section className="min-h-screen flex justify-center items-center bg-linear-to-br from-gray-50 to-gray-100 pt-20">
-            <div className="container mx-auto px-4">
+            <div className="container-[96rem] mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Text Content */}
                     <motion.div 
