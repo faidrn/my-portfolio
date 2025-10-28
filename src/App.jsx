@@ -8,6 +8,7 @@ import Services from './components/sections/Services';
 import Resume from './components/sections/Resume';
 import Portfolio from './components/sections/Portfolio';
 import Blog from './components/sections/Blog';
+import Contact from './components/sections/Contact';
 //import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Resume />
             <Portfolio />
             <Blog />
+            <Contact />
           </main>
           <Footer />
         </div>

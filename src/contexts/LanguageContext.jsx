@@ -64,11 +64,13 @@ const translations = {
         // Contact
         'contact.title': 'Get in Touch',
         'contact.subtitle': 'Let\'s work together',
-        'contact.name': 'Fredy Izquierdo',
-        'contact.email': 'fredy_izquierdo@hotmail.es',
+        'contact.name': 'Your Name',
+        'contact.email': 'Your Email',
         'contact.message': 'Your Message',
         'contact.send': 'Send Message',
         'contact.info': 'Contact Information',
+        'contact.personal.phone': 'Phone',
+        'contact.personal.location': 'Location',
 
         // Footer
         'footer.rights': 'All rights reserved.',
@@ -135,11 +137,13 @@ const translations = {
         // Contact
         'contact.title': 'Contáctame',
         'contact.subtitle': 'Trabajemos juntos',
-        'contact.name': 'Fredy Izquierdo',
-        'contact.email': 'fredy_izquierdo@hotmail.es',
+        'contact.name': 'Tu Nombre',
+        'contact.email': 'Tu Email',
         'contact.message': 'Tu Mensaje',
         'contact.send': 'Enviar Mensaje',
         'contact.info': 'Información de Contacto',
+        'contact.personal.phone': 'Teléfono',
+        'contact.personal.location': 'Ubicación',
 
         // Footer
         'footer.rights': 'Todos los derechos reservados.',
