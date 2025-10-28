@@ -14,7 +14,7 @@ const About = () => {
 
     return (
         <section id="about" className="py-20 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 lg:px-48">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -30,13 +30,16 @@ const About = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-items-center">
                     {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
+                        style={{
+                            width: '80%',
+                        }}
                     >
                         <div className="relative">
                             <div className="absolute inset-0 bg-blue-600 rounded-lg transform rotate-3"></div>
