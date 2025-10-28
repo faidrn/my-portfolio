@@ -6,6 +6,7 @@ import About from './components/sections/About';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
 import Resume from './components/sections/Resume';
+import Portfolio from './components/sections/Portfolio';
 //import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <About />
             <Services />
             <Resume />
+            <Portfolio />
           </main>
           <Footer />
         </div>
