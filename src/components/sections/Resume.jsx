@@ -23,9 +23,10 @@ const Resume = () => {
   ];
 
   const skills = {
-    frontend: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
-    backend: ["Node.js", "Express", "PostgreSQL", "MongoDB"],
-    tools: ["Git", "Docker", "AWS", "Figma"],
+    frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Frammer Motion"],
+    backend: ["Node.js", "Python"],
+    tools: ["Git", "GitHub", "AWS", "Figma", "VSCode", "NPM", "Vite"],
+    learning: ["PostgreSQL", "MongoDB"]
   };
 
   return (
@@ -105,9 +106,11 @@ const Resume = () => {
           {activeTab === "skills" && (
             <TabsContent>
               <div className="space-y-6">
-                {["frontend", "backend", "tools"].map((category) => (
+                {["frontend", "backend", "tools", "learning"].map((category) => (
                   <motion.div key={category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="text-gray-900 mb-4">{category}</h3>
+                    <h3 className="text-gray-900 mb-4">
+                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {skills[category].map((skill) => (
                         <Badge key={skill} variant="outline" className="border-blue-600 text-blue-600">
