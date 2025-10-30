@@ -44,24 +44,31 @@ export const translations = {
         'resume.download': 'Download CV',
         'title': "Fronted Developer", 
         
-        // Resume items
+        // Resume items experience
         'resume.experienceItems.frontendDeveloper.title': 'Frontend Developer',
         'resume.experienceItems.frontendDeveloper.company': 'Caja De Compensación Familiar Del Casanare – Comfacasanare',
         'resume.experienceItems.frontendDeveloper.location': 'Casanare, Colombia',
         'resume.experienceItems.frontendDeveloper.period': '2010 - 2022',
         'resume.experienceItems.frontendDeveloper.description': 'As a frontend developer, I contributed to the design, development, and implementation of internal management and automation systems focused on quality and operational efficiency. I developed functional and optimized web interfaces for the Quality Management System (QMS) and other internal portals, ensuring an intuitive user experience and compliance with technical and regulatory standards. Additionally, I provided technical support and performed software testing.',
 
-        'resume.educationItems.master.degree': 'Master of Computer Science',
-        'resume.educationItems.master.school': 'University of Technology',
-        'resume.educationItems.master.location': 'Boston, MA',
-        'resume.educationItems.master.period': '2016 - 2018',
-        'resume.educationItems.master.description': 'Specialized in Software Engineering and Web Development.',
+        'resume.experienceItems.web.title': 'Frontend WEB',
+        'resume.experienceItems.web.company': 'Caja De   Del Casanare – Comfacasanare',
+        'resume.experienceItems.web.location': 'FF, Colombia',
+        'resume.experienceItems.web.period': '2014 - 2025',
+        'resume.experienceItems.web.description': 'As a frontend devet and automation systems focused on quality and operational efficiency. I developed functional and optimized web interfaces for the Quality Management System (QMS) and other internal portals, ensuring an intuitive user experience and compliance with technical and regulatory standards. Additionally, I provided technical support and performed software testing.',
+
+        // Resume items education
+        'resume.educationItems.potgrade.degree': 'Postgraduate Specialization',
+        'resume.educationItems.potgrade.school': 'Universidad Europea Del Atlántico',
+        'resume.educationItems.potgrade.location': 'Santander, Spain',
+        'resume.educationItems.potgrade.period': '2017',
+        'resume.educationItems.potgrade.description': 'Specialized in Comprehensive Software Analysis and Design',
 
         'resume.educationItems.bachelor.degree': 'Bachelor of Computer Science',
-        'resume.educationItems.bachelor.school': 'State University',
-        'resume.educationItems.bachelor.location': 'Austin, TX',
-        'resume.educationItems.bachelor.period': '2012 - 2016',
-        'resume.educationItems.bachelor.description': 'Focus on programming fundamentals and computer systems.',
+        'resume.educationItems.bachelor.school': 'Fundación Universitaria Internacional del Trópico Americano – Unitrópico',
+        'resume.educationItems.bachelor.location': 'Casanare, Colombia',
+        'resume.educationItems.bachelor.period': '2013',
+        'resume.educationItems.bachelor.description': 'Systems Engineering',
 
         // Portfolio
         'portfolio.title': 'Portfolio',
@@ -136,24 +143,31 @@ export const translations = {
         'resume.skills': 'Habilidades',
         'resume.download': 'Descargar CV',
 
-        // Resume items
+        // Resume items experience
         'resume.experienceItems.frontendDeveloper.title': 'Desarrollador Frontend',
         'resume.experienceItems.frontendDeveloper.company': 'Caja De Compensación Familiar Del Casanare – Comfacasanare',
         'resume.experienceItems.frontendDeveloper.location': 'Casanare, Colombia',
         'resume.experienceItems.frontendDeveloper.period': '2010 - 2022',
         'resume.experienceItems.frontendDeveloper.description': 'Como desarrollador frontend, participé en el diseño, desarrollo e implementación de sistemas internos de gestión y automatización enfocados en la calidad y la eficiencia operativa. Desarrollé interfaces web funcionales y optimizadas para el Sistema de Gestión de Calidad (SGC) y otros portales internos, asegurando una experiencia de usuario intuitiva y el cumplimiento de los estándares técnicos y normativos. Además, brindé soporte técnico y realicé pruebas de software.',
 
-        'resume.educationItems.master.degree': 'Máster en Ciencias de la Computación',
-        'resume.educationItems.master.school': 'Universidad de Tecnología',
-        'resume.educationItems.master.location': 'Boston, MA',
-        'resume.educationItems.master.period': '2016 - 2018',
-        'resume.educationItems.master.description': 'Especialización en Ingeniería de Software y Desarrollo Web.',
+        'resume.experienceItems.web.title': 'Desarrollador web',
+        'resume.experienceItems.web.company': 'Caja De   Del Casanare – Comfacasanare',
+        'resume.experienceItems.web.location': 'Casanare, Colombia',
+        'resume.experienceItems.web.period': '2013 - 2023',
+        'resume.experienceItems.web.description': 'Como ación de sistemas internos de gestión y automatización enfocados en la calidad y la eficiencia operativa. Desarrollé interfaces web funcionales y optimizadas para el Sistema de Gestión de Calidad (SGC) y otros portales internos, asegurando una experiencia de usuario intuitiva y el cumplimiento de los estándares técnicos y normativos. Además, brindé soporte técnico y realicé pruebas de software.',
 
-        'resume.educationItems.bachelor.degree': 'Licenciatura en Ciencias de la Computación',
-        'resume.educationItems.bachelor.school': 'Universidad Estatal',
-        'resume.educationItems.bachelor.location': 'Austin, TX',
-        'resume.educationItems.bachelor.period': '2012 - 2016',
-        'resume.educationItems.bachelor.description': 'Enfoque en fundamentos de programación y sistemas computacionales.',
+        // Resume items education
+        'resume.educationItems.potgrade.degree': 'Especialización ',
+        'resume.educationItems.potgrade.school': 'Universidad Europea Del Atlántico',
+        'resume.educationItems.potgrade.location': 'Santander, España',
+        'resume.educationItems.potgrade.period': '2017',
+        'resume.educationItems.potgrade.description': 'Especialista en Análisis y Diseño Integral de Software',
+
+        'resume.educationItems.bachelor.degree': 'Licenciatura en Ingeniería',
+        'resume.educationItems.bachelor.school': 'Fundación Universitaria Internacional del Trópico Americano – Unitrópico',
+        'resume.educationItems.bachelor.location': 'Casanare, Colombia',
+        'resume.educationItems.bachelor.period': '2013',
+        'resume.educationItems.bachelor.description': 'Ingeniería de Sistemas',
 
         // Portfolio
         'portfolio.title': 'Portafolio',

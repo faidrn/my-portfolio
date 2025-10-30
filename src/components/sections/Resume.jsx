@@ -11,25 +11,32 @@ const Resume = () => {
   const [activeTab, setActiveTab] = React.useState("experience");
 
   const experience = [
-    { title: "Fronted Developer", company: "Caja De Compensación Familiar Del Casanare – Comfacasanare", location: "Casanare, Colombia", period: "2010 - 2022", description: "As a frontend developer, I contributed to the design, development, and implementation of internal management and automation systems focused on quality and operational efficiency. I developed functional and optimized web interfaces for the Quality Management System (QMS) and other internal portals, ensuring an intuitive user experience and compliance with technical and regulatory standards. Additionally, I provided technical support and performed software testing." },
+    { 
+      title: t('resume.experienceItems.frontendDeveloper.title'), 
+      company: t('resume.experienceItems.frontendDeveloper.company'), 
+      location: t('resume.experienceItems.frontendDeveloper.location'), 
+      period: t('resume.experienceItems.frontendDeveloper.period'), 
+      description: t('resume.experienceItems.frontendDeveloper.description') 
+
+    },
   ];
 
-  {/*const experience = {
-    en: {
-      
-    },
-    es: {
-      'title': "Desarrollador Fronted", 
-      'company': "Caja De Compensación Familiar Del Casanare – Comfacasanare", 
-      'location': "Casanare, Colombia", 
-      'period': "2010 - 2022", 
-      'description': "Como desarrollador frontend, participé en el diseño, desarrollo e implementación de sistemas internos de gestión y automatización enfocados en la calidad y la eficiencia operativa. Desarrollé interfaces web funcionales y optimizadas para el Sistema de Gestión de Calidad (SGC) y otros portales internos, asegurando una experiencia de usuario intuitiva y el cumplimiento de los estándares técnicos y normativos. Además, brindé soporte técnico y realicé pruebas de software"
-    },
-  };*/}
 
   const education = [
-    { degree: "Master of Computer Science", school: "University of Technology", location: "Boston, MA", period: "2016 - 2018", description: "Specialized in Software Engineering and Web Development." },
-    { degree: "Bachelor of Computer Science", school: "State University", location: "Austin, TX", period: "2012 - 2016", description: "Focus on programming fundamentals and computer systems." },
+    { 
+      degree: t('resume.educationItems.potgrade.degree'), 
+      school: t('resume.educationItems.potgrade.school'), 
+      location: t('resume.educationItems.potgrade.location'), 
+      period: t('resume.educationItems.potgrade.period'), 
+      description: t('resume.educationItems.potgrade.description')
+    },
+    { 
+      degree: t('resume.educationItems.bachelor.degree'), 
+      school: t('resume.educationItems.bachelor.school'), 
+      location: t('resume.educationItems.bachelor.location'), 
+      period: t('resume.educationItems.bachelor.period'), 
+      description: t('resume.educationItems.bachelor.description')
+    },
   ];
 
   const skills = {
@@ -124,7 +131,11 @@ const Resume = () => {
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {skills[category].map((skill) => (
-                        <Badge key={skill} variant="outline" className="border-blue-600 text-blue-600">
+                        <Badge 
+                          key={skill} 
+                          variant="outline" 
+                          className={`border-blue-600 text-blue-600`}
+                        >
                           {skill}
                         </Badge>
                       ))}
