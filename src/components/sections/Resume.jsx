@@ -11,11 +11,25 @@ const Resume = () => {
   const [activeTab, setActiveTab] = React.useState("experience");
 
   const experience = [
-    { title: "Fronted Developer", company: "Tech Company Inc", location: "San Francisco, CA", period: "2022 - Present", description: "Leading Development of enterprise web applications using React, Node.js, and AWS." },
-    { title: "Senior Frontend Developer", company: "Acme Corp", location: "Remote", period: "2019 - 2022", description: "Built scalable component libraries and improved performance across multiple customer-facing web apps using React and TypeScript." },
-    { title: "Full Stack Developer", company: "Startup Labs", location: "Austin, TX", period: "2017 - 2019", description: "Designed and implemented end-to-end features with Node.js, Express, PostgreSQL and React; owned deployment pipelines and monitoring." },
-    { title: "UI/UX Engineer", company: "Design Studio", location: "Barcelona, Spain", period: "2014 - 2017", description: "Worked closely with designers to deliver pixel-perfect interfaces, prototyping interactions and improving accessibility across projects." },
+    { title: "Fronted Developer", company: "Caja De Compensación Familiar Del Casanare – Comfacasanare", location: "Casanare, Colombia", period: "2010 - 2022", description: "As a frontend developer, I contributed to the design, development, and implementation of internal management and automation systems focused on quality and operational efficiency. I developed functional and optimized web interfaces for the Quality Management System (QMS) and other internal portals, ensuring an intuitive user experience and compliance with technical and regulatory standards. Additionally, I provided technical support and performed software testing." },
   ];
+
+  {/*const experience = {
+    en: {
+      'title': "Fronted Developer", 
+      'company': "Caja De Compensación Familiar Del Casanare – Comfacasanare", 
+      'location': "Casanare, Colombia", 
+      'period': "2010 - 2022", 
+      'description': "As a frontend developer, I contributed to the design, development, and implementation of internal management and automation systems focused on quality and operational efficiency. I developed functional and optimized web interfaces for the Quality Management System (QMS) and other internal portals, ensuring an intuitive user experience and compliance with technical and regulatory standards. Additionally, I provided technical support and performed software testing."
+    },
+    es: {
+      'title': "Desarrollador Fronted", 
+      'company': "Caja De Compensación Familiar Del Casanare – Comfacasanare", 
+      'location': "Casanare, Colombia", 
+      'period': "2010 - 2022", 
+      'description': "Como desarrollador frontend, participé en el diseño, desarrollo e implementación de sistemas internos de gestión y automatización enfocados en la calidad y la eficiencia operativa. Desarrollé interfaces web funcionales y optimizadas para el Sistema de Gestión de Calidad (SGC) y otros portales internos, asegurando una experiencia de usuario intuitiva y el cumplimiento de los estándares técnicos y normativos. Además, brindé soporte técnico y realicé pruebas de software"
+    },
+  };*/}
 
   const education = [
     { degree: "Master of Computer Science", school: "University of Technology", location: "Boston, MA", period: "2016 - 2018", description: "Specialized in Software Engineering and Web Development." },
@@ -67,11 +81,12 @@ const Resume = () => {
                       <div className="flex items-start justify-between mb-2">
                         <div>
                           <h3 className="text-gray-900 mb-1">{job.title}</h3>
-                          <p className="text-blue-600">{job.company}</p>
+                          <p className="text-blue-600 mb-1">{job.company}</p>
+                          <p className="text-gray-600">{job.location}</p>
                         </div>
                         <Badge variant="secondary">{job.period}</Badge>
                       </div>
-                      <p className="text-gray-600 mt-3">{job.description}</p>
+                      <p className="text-gray-600 mt-3">{t(job.description)}</p>
                     </div>
                   </motion.div>
                 ))}
