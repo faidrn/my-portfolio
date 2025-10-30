@@ -16,11 +16,7 @@ const Resume = () => {
 
   {/*const experience = {
     en: {
-      'title': "Fronted Developer", 
-      'company': "Caja De Compensación Familiar Del Casanare – Comfacasanare", 
-      'location': "Casanare, Colombia", 
-      'period': "2010 - 2022", 
-      'description': "As a frontend developer, I contributed to the design, development, and implementation of internal management and automation systems focused on quality and operational efficiency. I developed functional and optimized web interfaces for the Quality Management System (QMS) and other internal portals, ensuring an intuitive user experience and compliance with technical and regulatory standards. Additionally, I provided technical support and performed software testing."
+      
     },
     es: {
       'title': "Desarrollador Fronted", 
