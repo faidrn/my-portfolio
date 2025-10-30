@@ -4,80 +4,21 @@ import { Button } from "../ui/Button";
 import { Badge } from "../ui/badge";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { projects } from '../../locales/projects';
 
 
 const Portfolio = () => {
-    const { t } = useLanguage();
+    const { t, language  } = useLanguage();     // Extraer el lenguaje para cambiar de idioma, ya que t es la función traductora
     const [activeFilter, setActiveFilter] = useState('all');
 
     const filters = ['all', 'web', 'mobile', 'design'];
 
-    const projects = [
-        {
-            id: 1,
-            title: 'E-Commerce Platform',
-            category: 'web',
-            description: 'Full-featured online store with payment integration',
-            image: 'https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NjExMTExNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['React', 'Node.js', 'Stripe'],
-            demoLink: '#',
-            codeLink: '#',
-        },
-        {
-            id: 2,
-            title: 'Fitness Mobile App',
-            category: 'mobile',
-            description: 'Track workouts and nutrition on the go',
-            image: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzYxMTA3NDkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['React Native', 'Firebase'],
-            demoLink: '#',
-            codeLink: '#',
-        },
-        {
-            id: 3,
-            title: 'SaaS Dashboard',
-            category: 'web',
-            description: 'Analytics dashboard for business insights',
-            image: 'https://images.unsplash.com/photo-1625461291092-13d0c45608b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBkZXNrfGVufDF8fHx8MTc2MTA1OTcxN3ww&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['Next.js', 'TypeScript', 'Recharts'],
-            demoLink: '#',
-            codeLink: '#',
-        },
-        {
-            id: 4,
-            title: 'Brand Identity Design',
-            category: 'design',
-            description: 'Complete brand redesign for tech startup',
-            image: 'https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMDI2OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['Figma', 'Branding'],
-            demoLink: '#',
-            codeLink: '#',
-        },
-        {
-            id: 5,
-            title: 'Task Management App',
-            category: 'web',
-            description: 'Collaborative project management tool',
-            image: 'https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NjExMTExNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['Vue.js', 'MongoDB'],
-            demoLink: '#',
-            codeLink: '#',
-        },
-        {
-            id: 6,
-            title: 'Social Media App',
-            category: 'mobile',
-            description: 'Connect with friends and share moments',
-            image: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzYxMTA3NDkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['Flutter', 'AWS'],
-            demoLink: '#',
-            codeLink: '#',
-        },
-    ];
+    
 
     const filteredProjects = activeFilter === 'all' 
         ? projects 
         : projects.filter(project => project.category === activeFilter);
+
 
     return (
         <section
@@ -133,11 +74,11 @@ const Portfolio = () => {
                             <div className="relative h-64 overflow-hidden">
                                 <img 
                                     src={project.image}
-                                    alt={project.title} 
+                                    alt={project[language ]?.title} 
                                     className="size-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div
-                                    className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center gap-4"
+                                    className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center gap-4"
                                 >
                                     <a 
                                         href={project.demoLink}
@@ -157,10 +98,10 @@ const Portfolio = () => {
                             {/**Content */}
                             <div className="p-6">
                                 <h3 className="text-xl text-gray-900 mb-4">
-                                    {project.title}
+                                    {project[language ]?.title}
                                 </h3>
                                 <p className="text-gray-600 mb-4">
-                                    {project.description}
+                                    {project[language ]?.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, idx) => (
