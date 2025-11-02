@@ -11,7 +11,7 @@ const Footer = () => {
     const socialLinks = [
         { icon: FaGithub, url: 'https://github.com/faidrn', label: 'GitHub' },
         { icon: FaLinkedin, url: 'https://www.linkedin.com/in/fredy-izquierdo-897740344', label: 'LinkedIn' },
-        { icon: FaRegEnvelope, url: 'mailto:fredy_izquierdo@hotmail.es', label: 'Email' },
+        { icon: FaRegEnvelope, url: 'mailto:fredyizquierdo.dev@gmail.com', label: 'Email' },
     ];
 
     return (
@@ -65,7 +65,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-400 text-sm">
-                        © {currentYear} Portfolio. {t('footer.rights')}.
+                        © {currentYear} Portfolio. {t('footer.rights')}
                     </p>
                     <p className="text-gray-400 text-sm flex items-center gap-2">
                         {t('footer.made')} <Heart className="w-4 h-4 text-red-500 fill-current" /> by Fredy Izquierdo
