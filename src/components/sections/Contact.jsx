@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Card, CardContent } from "../ui/card";
-//import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa6'; 
+import { FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
@@ -39,10 +39,10 @@ const Contact = () => {
             link: 'mailto:contact@example.com',
         },
         {
-            icon: Phone,
-            title: t('contact.personal.phone'),
-            content: '+1 (555) 123-4567',
-            link: 'tel:+15551234567',
+            icon: FaWhatsapp,
+            title: t('contact.personal.whatsapp'),
+            content: t('contact.send'),
+            link: `https://wa.me/421950248025?text=${t('contact.whatsapp.message')}`,
         },
         {
             icon: MapPin,

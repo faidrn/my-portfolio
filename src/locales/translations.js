@@ -95,6 +95,8 @@ export const translations = {
         'contact.info': 'Contact Information',
         'contact.personal.phone': 'Phone',
         'contact.personal.location': 'Location',
+        'contact.personal.whatsapp': 'Whatsapp',
+        'contact.whatsapp.message': "Hello! I'm interested in your services as a frontend developer.",
 
         // Footer
         'footer.rights': 'All rights reserved.',
@@ -194,6 +196,8 @@ export const translations = {
         'contact.info': 'Información de Contacto',
         'contact.personal.phone': 'Teléfono',
         'contact.personal.location': 'Ubicación',
+        'contact.personal.whatsapp': 'Whatsapp',
+        'contact.whatsapp.message': "Hola! Estoy interesado en tus servicios como desarrollador frontend.",
 
         // Footer
         'footer.rights': 'Todos los derechos reservados.',
