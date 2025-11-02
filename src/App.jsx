@@ -9,6 +9,7 @@ import Resume from './components/sections/Resume';
 import Portfolio from './components/sections/Portfolio';
 import Blog from './components/sections/Blog';
 import Contact from './components/sections/Contact';
+import { Toaster } from 'sonner';
 //import './App.css'
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
             <Portfolio />
             <Blog />
             <Contact />
+
+             {/* Toaster para mostrar los mensajes */}
+            <Toaster position="top-center" richColors closeButton />
           </main>
           <Footer />
         </div>

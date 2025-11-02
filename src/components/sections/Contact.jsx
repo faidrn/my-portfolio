@@ -8,6 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
     const { t } = useLanguage();
@@ -17,11 +18,40 @@ const Contact = () => {
         message: '',
     });
 
+    const [isSending, setIsSending] = useState(false);
+
+    // ✅ Validación estricta de email
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+        return regex.test(email);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Mock form submission
-        toast.success('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
+
+        // ✅ Validar email antes de enviar
+        if (!validateEmail(formData.email)) {
+            toast.error(t('contact.email.errorTypingEmail'));
+            return;
+        }
+        
+        setIsSending(true);
+
+        emailjs
+            .send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formData,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+            )
+            .then(() => {
+                toast.success(t('contact.email.success'));
+                setFormData({ name: "", email: "", message: "" });
+            })
+            .catch(() => {
+                toast.error(t('contact.email.error'));
+            })
+            .finally(() => setIsSending(false));
     };
 
     const handleChange = (e) => {
@@ -35,8 +65,8 @@ const Contact = () => {
         {
             icon: Mail,
             title: 'Email',
-            content: 'contact@example.com',
-            link: 'mailto:contact@example.com',
+            content: 'fredyizquierdo.dev@gmail.com',
+            link: 'mailto:fredyizquierdo.dev@gmail.com',
         },
         {
             icon: FaWhatsapp,
