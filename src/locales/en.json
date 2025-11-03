@@ -1,0 +1,12 @@
+{
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest articles and tutorials",
+    "readmore": "Read More",
+    "minutes": "min read",
+    "emptyMessage": "No posts available yet. Stay tuned!"
+  }, 
+  "blogPost": {
+    "backToBlog": "Back to Blog"
+  }
+}

@@ -79,7 +79,7 @@ export const translations = {
         'portfolio.filter.design': 'Design',
         'portfolio.view': 'View Project',
 
-        // Blog
+        // Blog (código viejo, ya no lo uso en el componente blog)
         'blog.title': 'Blog',
         'blog.subtitle': 'Latest articles and tutorials',
         'blog.readmore': 'Read More',
@@ -183,7 +183,7 @@ export const translations = {
         'portfolio.filter.design': 'Diseño',
         'portfolio.view': 'Ver Proyecto',
 
-        // Blog
+        // Blog (código viejo, ya no lo uso en el componente blog)
         'blog.title': 'Blog',
         'blog.subtitle': 'Últimos artículos y tutoriales',
         'blog.readmore': 'Leer Más',
