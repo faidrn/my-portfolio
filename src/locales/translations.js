@@ -95,6 +95,11 @@ export const translations = {
         'contact.info': 'Contact Information',
         'contact.personal.phone': 'Phone',
         'contact.personal.location': 'Location',
+        'contact.personal.whatsapp': 'Whatsapp',
+        'contact.whatsapp.message': "Hello! I'm interested in your services as a frontend developer.",
+        'contact.email.success': 'Message sent successfully!',
+        'contact.email.error': 'The message could not be sent. Check your internet connection and try again.',
+        'contact.email.errorTypingEmail': 'Please enter a valid email address (name@domain.com)',
 
         // Footer
         'footer.rights': 'All rights reserved.',
@@ -194,6 +199,11 @@ export const translations = {
         'contact.info': 'Información de Contacto',
         'contact.personal.phone': 'Teléfono',
         'contact.personal.location': 'Ubicación',
+        'contact.personal.whatsapp': 'Whatsapp',
+        'contact.whatsapp.message': "Hola! Estoy interesado en tus servicios como desarrollador frontend.",
+        'contact.email.success': '¡Mensaje enviado correctamente!',
+        'contact.email.error': 'El mensaje no pudo ser enviado. Verifica tu conexión a internet e intenta de nuevo.',
+        'contact.email.errorTypingEmail': 'Por favor, introduzca una dirección de correo electrónico válida (nombre@dominio.com)',
 
         // Footer
         'footer.rights': 'Todos los derechos reservados.',
