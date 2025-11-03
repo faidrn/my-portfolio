@@ -7,8 +7,30 @@ import { motion } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs";
 
 const Resume = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [activeTab, setActiveTab] = React.useState("experience");
+
+  // IDs archivos CV
+  const ENGLISH_FILE_ID = '17sud_LRxrxaDK3Uf1QosbJdyhHyDApDP';
+  const SPANISH_FILE_ID = '1RLgjBqdIZ-X86xmvI-DiUBbIZclLdwGC';
+
+  // ✅ URLs directas de descarga desde Google Drive
+  const resumeLinks = {
+    en: `https://drive.google.com/uc?export=download&id=${ENGLISH_FILE_ID}`,
+    es: `https://drive.google.com/uc?export=download&id=${SPANISH_FILE_ID}`,
+  };
+
+  const handleDownload = () => {
+    const downloadUrl = resumeLinks[language] || resumeLinks.en;
+    const link = document.createElement("a");
+
+    link.href = downloadUrl;
+    link.download = language === "es" ? "FredyIzquierdo_CV_ES.pdf" : "FredyIzquierdo_CV_EN.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const experience = [
     { 
@@ -53,7 +75,10 @@ const Resume = () => {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
           <h2 className="text-gray-900 mb-4 text-4xl">{t("resume.title")}</h2>
           <p className="text-blue-600 mb-8 text-xl">{t("resume.subtitle")}</p>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+          <Button 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8"
+            onClick={handleDownload}
+          >
             <Download className="mr-2 size-5" />
             {t("resume.download")}
           </Button>
