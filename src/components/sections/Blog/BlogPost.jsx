@@ -170,6 +170,8 @@ const BlogPost = () => {
                                     <a
                                         key={index}
                                         href={block.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 text-[18px]"
                                     >
                                         {block.text}
