@@ -11,43 +11,49 @@
         "content": [
             { "type": "heading", "text": "Introducción" },
             { "type": "paragraph", "text": "En este tutorial, construiremos un portafolio personal usando React, Vite y Tailwind CSS. El portafolio mostrará experiencia, habilidades, proyectos e incluirá animaciones suaves y soporte multilenguaje." },
-            { "type": "image", "src": "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?_gl=1*1fhgb14*_ga*Mzg1NjI2MDkxLjE3NDU2MDU0NzI.*_ga_8JE65Q40S6*czE3NjIyMDkyMDckbzQkZzEkdDE3NjIyMDkyOTQkajM0JGwwJGgw", "alt": "Vista previa del portafolio en React" },
 
             { "type": "heading", "text": "Tecnologías" },
-            { "type": "list", "items": [
-                "Frontend: React.js + Vite",
-                "Estilos: Tailwind CSS",
-                "Animaciones: Framer Motion",
-                "Íconos: Lucide React",
-                "Utilidades: classnames (cn), custom hooks"
-            ]},
+            { "type": "table",
+                "headers": ["Categoria", "Herramientas"],
+                "rows": [
+                    ["Frontend", "React.js + Vite"],
+                    ["Styling", "Tailwind CSS"],
+                    ["Animations", "Framer Motion"],
+                    ["Icons", "Lucide React + React Icons"],
+                    ["Utilities", "classnames (cn), custom hooks"]
+                ]
+            },
 
             { "type": "heading", "text": "Configuración del Proyecto" },
             { "type": "code", "language": "bash", "text": "# Clonar repositorio\ngit clone https://github.com/faidrn/my-portfolio.git\ncd my-portfolio\n\n# Instalar dependencias\nnpm install\n\n# Iniciar servidor de desarrollo\nnpm run dev\n\n# Abrir el navegador en\nhttp://localhost:5173" },
 
             { "type": "heading", "text": "Estructura del Proyecto" },
-            { "type": "image", "src": "https://example.com/images/project-structure-es.jpg", "alt": "Estructura del proyecto en carpetas" },
             { "type": "code", "language": "plaintext", "text": "my-portfolio/\n├── public/\n├── src/\n│   ├── components/\n│   │   ├── ui/\n│   │   ├── sections/\n│   │   ├── common/\n│   │   └── layout/\n│   ├── contexts/\n│   │   └── LanguageContext.jsx\n│   ├── App.jsx\n│   ├── App.css\n│   ├── index.css\n│   └── main.jsx\n├── package.json\n├── vite.config.js\n├── tailwind.config.js\n└── README.md" },
 
             { "type": "heading", "text": "Creando el componente Tabs" },
+            { "type": "paragraph", "text": "Usamos un componente Tabs flexible con triggers y contenido que responde a los clicks:" },
             { "type": "code", "language": "jsx", "text": "<Tabs defaultValue={0}>\n  <TabsList>\n    <TabsTrigger>Experiencia</TabsTrigger>\n    <TabsTrigger>Educación</TabsTrigger>\n    <TabsTrigger>Habilidades</TabsTrigger>\n  </TabsList>\n\n  <TabsContent>Contenido de Experiencia</TabsContent>\n  <TabsContent>Contenido de Educación</TabsContent>\n  <TabsContent>Contenido de Habilidades</TabsContent>\n</Tabs>" },
 
             { "type": "heading", "text": "Componente Badge" },
+            { "type": "paragraph", "text": "Los badges son pequeñas etiquetas para fechas, habilidades o tags:" },
             { "type": "code", "language": "jsx", "text": "<Badge variant=\"secondary\">2022 - Presente</Badge>" },
 
-            { "type": "heading", "text": "Integrando Tabs en la sección Resume" },
-            { "type": "image", "src": "https://example.com/images/tabs-component-es.jpg", "alt": "Ejemplo del componente Tabs" },
+            { "type": "heading", "text": "Integrando Tabs en la sección Currículum" },
+            { "type": "paragraph", "text": "Dentro de Resume.jsx, importa Tabs, TabsList, TabsTrigger, TabsContent y Badge. Usa estado para cambiar entre secciones:" },
+            { "type": "image", "src": "https://drive.google.com/thumbnail?id=13ZnfL3y3VWiCztpK9OX0HdWm_HdsZ90R&sz=w1000", "alt": "Ejemplo del componente Tabs" },
             { "type": "code", "language": "jsx", "text": "const [activeTab, setActiveTab] = React.useState(\"experience\");\n\n<Tabs>\n  <TabsList>\n    <TabsTrigger onClick={() => setActiveTab(\"experience\")}>Experiencia</TabsTrigger>\n    <TabsTrigger onClick={() => setActiveTab(\"education\")}>Educación</TabsTrigger>\n    <TabsTrigger onClick={() => setActiveTab(\"skills\")}>Habilidades</TabsTrigger>\n  </TabsList>\n\n  {activeTab === \"experience\" && <TabsContent>{/* Contenido de experiencia */}</TabsContent>}\n  {activeTab === \"education\" && <TabsContent>{/* Contenido de educación */}</TabsContent>}\n  {activeTab === \"skills\" && <TabsContent>{/* Contenido de habilidades */}</TabsContent>}\n</Tabs>" },
 
             { "type": "heading", "text": "Animaciones" },
-            { "type": "image", "src": "https://example.com/images/animations-es.jpg", "alt": "Ejemplo de animaciones con Framer Motion" },
+            { "type": "paragraph", "text": "Utilice Framer Motion para animar secciones y elementos de lista:" },
             { "type": "code", "language": "jsx", "text": "<motion.div\n  initial={{ opacity: 0, y: 20 }}\n  whileInView={{ opacity: 1, y: 0 }}\n  transition={{ duration: 0.4 }}\n>\n  {/* Contenido */}\n</motion.div>" },
 
             { "type": "heading", "text": "Soporte Multilenguaje" },
             { "type": "paragraph", "text": "Usa LanguageContext para proveer traducciones en etiquetas y textos en todo tu portafolio." },
 
             { "type": "heading", "text": "Conclusión" },
-            { "type": "paragraph", "text": "Ahora tienes un portafolio moderno en React con diseño responsivo, pestañas para secciones, badges para detalles, animaciones y soporte multilenguaje." }
+            { "type": "paragraph", "text": "Ahora tienes un portafolio moderno en React con diseño responsivo, pestañas para secciones, badges para detalles, animaciones y soporte multilenguaje." },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/my-portfolio" }
         ]
     },
     {
