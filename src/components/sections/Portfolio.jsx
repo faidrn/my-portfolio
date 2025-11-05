@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 import { Badge } from "../ui/badge";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { projects } from '../../locales/projects';
+import { projects } from '../../content/portfolio/projects';
 
 
 const Portfolio = () => {
@@ -82,12 +82,16 @@ const Portfolio = () => {
                                 >
                                     <a 
                                         href={project.demoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 size-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white"
                                     >
                                         <FiExternalLink className="size-6" />
                                     </a>
                                     <a 
                                         href={project.codeLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 size-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white"
                                     >
                                         <FiGithub className="size-6" />

@@ -8,7 +8,7 @@ const LanguageContext = createContext();
 
 // Componente proveedor del contexto
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('en'); // Idioma predeterminado
 
     // Función para obtener la traducción
     const t = (key) => {
