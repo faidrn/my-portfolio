@@ -11,7 +11,7 @@ const Portfolio = () => {
     const { t, language  } = useLanguage();     // Extraer el lenguaje para cambiar de idioma, ya que t es la función traductora
     const [activeFilter, setActiveFilter] = useState('all');
 
-    const filters = ['all', 'web', 'mobile', 'design'];
+    const filters = ['all', 'web', 'mobile', 'design', 'python'];
 
     
 

@@ -1,6 +1,6 @@
 export const projects = [
         {
-            id: 9,
+            id: 12,
             en: {
                 title: 'Modern React Portfolio',
                 description: 'Personal React portfolio with Vite and Tailwind — stylish, fast, and developer-friendly',
@@ -11,12 +11,44 @@ export const projects = [
             }, 
             category: 'web',
             image: 'https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NjExMTExNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-            tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+            tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'npm'],
             demoLink: '#',
             codeLink: 'https://github.com/faidrn/my-portfolio',
         },
         {
-            id: 8,
+            id: 11,
+            en: {
+                title: 'Learning Tailwind CSS',
+                description: 'This project is a practical guide for learning and experimenting with Tailwind CSS. It includes examples of components, animations, gradients, custom font integration, and SVG icon usage. The goal is to make learning Tailwind CSS and its modern applications easier in real-world web projects.',
+            }, 
+            es: {
+                title: 'Aprendiendo Tailwind CSS',
+                description: 'Este proyecto es una guía práctica para aprender y experimentar con Tailwind CSS. Incluye ejemplos de componentes, animaciones, gradientes, integración de fuentes personalizadas y uso de iconos SVG. El objetivo es facilitar el aprendizaje de Tailwind CSS y sus utilidades modernas en proyectos web reales.',
+            },
+            category: 'web',
+            image: '/images/portfolio/learning-tailwind.webp',
+            tags: ['HTML', 'Tailwind CSS', 'Node.js', 'npm'],
+            demoLink: 'https://faidrn.github.io/aprendiendo-tailwind/',
+            codeLink: 'https://github.com/faidrn/aprendiendo-tailwind/tree/main',
+        },
+        {
+            id: 10,
+            en: {
+                title: 'Tic-Tac-Toe Game - React Tutorial Implementation',
+                description: 'This project is an implementation of the classic Tic-Tac-Toe game based on the official React tutorial. The tutorial walks through fundamental React concepts while building this interactive game.',
+            }, 
+            es: {
+                title: 'Juego de tres en raya: Tutorial de implementación en React',
+                description: 'Este proyecto es una implementación del clásico juego del gato basada en el tutorial oficial de React. El tutorial explica los conceptos fundamentales de React mientras se desarrolla este juego interactivo.',
+            },
+            category: 'web',
+            image: '/images/portfolio/tic-tac-toe-game.webp',
+            tags: ['React', 'Tailwind CSS', 'Node.js', 'npm'],
+            demoLink: 'https://faidrn.github.io/tic-tac-toe-game/',
+            codeLink: 'https://github.com/faidrn/tic-tac-toe-game',
+        },
+        {
+            id: 9,
             en: {
                 title: 'To-Do List App (React)',
                 description: 'Track workouts and nutrition on the goA simple and elegant to-do list app built during my React learning journey. Component-based structure, hooks usage, and local storage persistence.',
@@ -27,12 +59,12 @@ export const projects = [
             },
             category: 'web',
             image: '/images/portfolio/todo-list.webp',
-            tags: ['React', 'CSS', 'JavaScript'],
+            tags: ['React', 'CSS', 'JavaScript', 'Node.js', 'npm'],
             demoLink: 'https://faidrn.github.io/curso-react-intro/',
             codeLink: 'https://github.com/faidrn/curso-react-intro',
         },
         {
-            id: 7,
+            id: 8,
             en: {
                 title: 'YouTube Clone',
                 description: 'A responsive YouTube-style video app created with modern web technologies. UI/UX similar to YouTube, responsive design, and dynamic layout.',
@@ -48,7 +80,7 @@ export const projects = [
             codeLink: 'https://github.com/faidrn/youtube-clone',
         },
         {
-            id: 6,
+            id: 7,
             en: {
                 title: 'Analog Clock',
                 description: 'A real-time analog clock built entirely with HTML, CSS, and JavaScript. Smooth animations and responsive design.',
@@ -64,7 +96,7 @@ export const projects = [
             codeLink: 'https://github.com/faidrn/analog-clock',
         },
         {
-            id: 5,
+            id: 6,
             en: {
                 title: 'Hangman Game',
                 description: 'Classic hangman game implemented in JavaScript. Interactive gameplay, dynamic word selection, and winning/losing states.',
@@ -80,7 +112,7 @@ export const projects = [
             codeLink: 'https://github.com/faidrn/hangman-game',
         },
         {
-            id: 4,
+            id: 5,
             en: {
                 title: 'House in 3D with CSS',
                 description: '3D house inspired by Dragon Ball Z Kame House built using pure CSS.  Creative 3D design using CSS transformations and animations.',
@@ -94,6 +126,22 @@ export const projects = [
             tags: ['HTML', 'CSS', 'JavaScript'],
             demoLink: 'https://faidrn.github.io/hello-world/kame-house/kame-house.html',
             codeLink: 'https://github.com/faidrn/hello-world/tree/main/kame-house',
+        },
+        {
+            id: 4,
+            en: {
+                title: 'Convert Celsius To Fahrenheit Applying Artificial Intelligence With Python And Tensorflow',
+                description: 'Simple neural network applying machine learning to convert celsius to fahrenheit.',
+            },
+            es: {
+                title: 'Conversión de Celsius a Fahrenheit mediante inteligencia artificial con Python y TensorFlow',
+                description: 'Red neuronal simple que aplica aprendizaje automático para convertir grados Celsius a Fahrenheit.',
+            },
+            category: 'python',
+            image: 'https://raw.githubusercontent.com/faidrn/convert-celsius-to-fahrenheit-applying-AI-with-python/main/resources/images/neuralNetwork.png',
+            tags: ['Python', 'Tensorflow'],
+            demoLink: '#',
+            codeLink: 'https://github.com/faidrn/convert-celsius-to-fahrenheit-applying-AI-with-python',
         },
         {
             id: 3,

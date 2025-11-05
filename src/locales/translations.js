@@ -77,6 +77,7 @@ export const translations = {
         'portfolio.filter.web': 'Web', 
         'portfolio.filter.mobile': 'Mobile',
         'portfolio.filter.design': 'Design',
+        'portfolio.filter.python': 'Python',
         'portfolio.view': 'View Project',
 
         // Blog (código viejo, ya no lo uso en el componente blog)
