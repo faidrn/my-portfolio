@@ -5,11 +5,14 @@ import { useLanguage } from '../../contexts/LanguageContext';
 // Iconos para el menú (Menu, X) 
 import { Menu, X } from 'lucide-react'; 
 import { LanguageToggle } from '../common/LanguageToggle';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
     const  [isMenuOpen, setIsMenuOpen] = useState(false);
     const { t } = useLanguage();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const navItems = [
         { key: 'about', href: "#about" },
@@ -19,6 +22,24 @@ const Header = () => {
         { key: 'blog', href: "#blog" },
         { key: 'contact', href: "#contact" },
     ];
+
+    const handleNavClick = (sectionId) => {
+        const section = document.getElementById(sectionId);
+
+        if (location.pathname !== "/"){
+            // Si estas fuera 0del home, vuelve al home primero
+            navigate("/");
+
+            // Espera un poco para que el DOM se monte
+            setTimeout(() => {
+                section?.scrollIntoView({ behavior: "smooth" });
+            }, 400);
+        } /*else{
+            // Si ya estás en el home, simplemente haz scroll
+                section?.scrollIntoView({ behavior: "smooth" });
+        }*/
+    };
+
 
     return (
         <motion.header
@@ -30,7 +51,11 @@ const Header = () => {
             <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     {/* Logo Section */}
-                    <a href="#" className='text-blue-600 hover:text-blue-700 transition-colors'>
+                    <a 
+                        href="#" 
+                        className='text-blue-600 hover:text-blue-700 transition-colors'
+                        onClick={() => handleNavClick("#")}
+                    >
                         <span className='text-2xl'>
                             Portfolio
                         </span>
@@ -42,6 +67,7 @@ const Header = () => {
                             <a 
                                 key={item.key}
                                 href={item.href}
+                                onClick={() => handleNavClick(item.href)}
                                 className='text-gray-700 hover:text-blue-600 transition-colors'
                             >
                                 {t(`nav.${item.key}`)}
