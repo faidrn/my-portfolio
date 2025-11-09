@@ -77,7 +77,7 @@ const Contact = () => {
         {
             icon: MapPin,
             title: t('contact.personal.location'),
-            content: 'San Francisco, CA',
+            content: t('contact.personal.location.country'),
             link: '#',
         },
     ];
