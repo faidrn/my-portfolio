@@ -1,7 +1,7 @@
 import React from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { Heart } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa6'; 
+import { FaGithub, FaLinkedin, FaRegEnvelope, FaTiktok, FaInstagram, FaYoutube, FaXTwitter  } from 'react-icons/fa6'; 
 
 
 const Footer = () => {
@@ -12,6 +12,10 @@ const Footer = () => {
         { icon: FaGithub, url: 'https://github.com/faidrn', label: 'GitHub' },
         { icon: FaLinkedin, url: 'https://www.linkedin.com/in/fredy-izquierdo-897740344', label: 'LinkedIn' },
         { icon: FaRegEnvelope, url: 'mailto:fredyizquierdo.dev@gmail.com', label: 'Email' },
+        { icon: FaTiktok, url: 'https://www.tiktok.com/@devenaccion', label: 'TikTok' },
+        { icon: FaInstagram, url: 'https://www.instagram.com/devenaccion/', label: 'Instagram' },
+        { icon: FaYoutube, url: 'https://www.youtube.com/@DevEnAccion', label: 'YouTube' },
+        { icon: FaXTwitter, url: 'https://x.com/DevEnAccion', label: 'X (Twitter)' },
     ];
 
     return (
