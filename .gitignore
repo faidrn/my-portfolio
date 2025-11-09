@@ -128,3 +128,5 @@ private/
 .personal/
 
 .qodo/
+# Local Netlify folder
+.netlify
