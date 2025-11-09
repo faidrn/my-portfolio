@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "../ui/sendEmail";
 
 const Contact = () => {
     const { t } = useLanguage();
@@ -26,32 +26,16 @@ const Contact = () => {
         return regex.test(email);
     };
 
-    const handleSubmit = (e) => {
+
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // ✅ Validar email antes de enviar
-        if (!validateEmail(formData.email)) {
-            toast.error(t('contact.email.errorTypingEmail'));
-            return;
+        try {
+            await sendEmail({ name, email, message });
+            toast.success(t('contact.email.success'));
+        } catch {
+            toast.error(t('contact.email.error'));
         }
-        
-        setIsSending(true);
-
-        emailjs
-            .send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formData,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-            )
-            .then(() => {
-                toast.success(t('contact.email.success'));
-                setFormData({ name: "", email: "", message: "" });
-            })
-            .catch(() => {
-                toast.error(t('contact.email.error'));
-            })
-            .finally(() => setIsSending(false));
     };
 
     const handleChange = (e) => {
