@@ -27,14 +27,27 @@ const Contact = () => {
     };
 
 
-    
+    // ✅ Manejo de envío
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const { name, email, message } = formData;
+
+        if (!validateEmail(email)) {
+            toast.error(t("contact.email.invalid"));
+            return;
+        }
+
         try {
+            setIsSending(true);
             await sendEmail({ name, email, message });
             toast.success(t('contact.email.success'));
-        } catch {
+        setFormData({ name: "", email: "", message: "" }); // limpia el form
+        } catch (error) {
+            console.error("❌ Error al enviar email:", error);
             toast.error(t('contact.email.error'));
+        } finally {
+            setIsSending(false);
         }
     };
 
