@@ -66,7 +66,7 @@ const Hero = () => {
                             <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20">
                             </div>
                             <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                                <img src="https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMDI2OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                                <img src="/images/sections/img-hero-section.webp"
                                     alt="Developer"
                                     className="w-full h-full object-cover"
                                 />

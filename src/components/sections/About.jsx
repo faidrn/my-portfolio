@@ -44,7 +44,7 @@ const About = () => {
                         <div className="relative">
                             <div className="absolute inset-0 bg-blue-600 rounded-lg transform rotate-3"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1625461291092-13d0c45608b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBkZXNrfGVufDF8fHx8MTc2MTA1OTcxN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                                src="/images/sections/img-about-section.webp"
                                 alt="About"
                                 className="relative rounded-lg shadow-xl w-full"
                             />

@@ -10,7 +10,7 @@ export const projects = [
                 description: 'Portafolio personal con React, Vite y Tailwind: elegante, veloz y fácil de mantener',
             }, 
             category: 'web',
-            image: 'https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NjExMTExNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+            image: '/images/portfolio/portfolio.webp',
             tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'npm'],
             demoLink: '#',
             codeLink: 'https://github.com/faidrn/my-portfolio',
