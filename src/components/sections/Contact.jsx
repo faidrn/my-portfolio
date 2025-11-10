@@ -149,7 +149,7 @@ const Contact = () => {
                     >
                         <Card className="shadow-xl border-gray-300">
                             <CardContent className="p-8">
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
                                     <div>
                                         <label htmlFor="name" className="block text-gray-700 mb-2">
                                             {t('contact.name')}
