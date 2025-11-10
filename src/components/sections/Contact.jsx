@@ -48,7 +48,8 @@ const Contact = () => {
                 toast.success(t('contact.email.success'));
                 setFormData({ name: "", email: "", message: "" });
             })
-            .catch(() => {
+            .catch((error) => {
+                console.log("ERROR: ", error);
                 toast.error(t('contact.email.error'));
             })
             .finally(() => setIsSending(false));
