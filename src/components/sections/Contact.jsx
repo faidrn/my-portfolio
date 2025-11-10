@@ -8,7 +8,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
     const { t } = useLanguage();
@@ -37,22 +36,7 @@ const Contact = () => {
         
         setIsSending(true);
 
-        emailjs
-            .send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formData,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-            )
-            .then(() => {
-                toast.success(t('contact.email.success'));
-                setFormData({ name: "", email: "", message: "" });
-            })
-            .catch((error) => {
-                console.log("ERROR: ", error);
-                toast.error(t('contact.email.error'));
-            })
-            .finally(() => setIsSending(false));
+        
     };
 
     const handleChange = (e) => {
@@ -150,7 +134,9 @@ const Contact = () => {
                     >
                         <Card className="shadow-xl border-gray-300">
                             <CardContent className="p-8">
-                                <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
+                                <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true">
+                                    <input type="hidden" name="form-name" value="contact" /> {/* Esto es útil para Netlify */}
+                                    <input name="bot-field" hidden />
                                     <div>
                                         <label htmlFor="name" className="block text-gray-700 mb-2">
                                             {t('contact.name')}
