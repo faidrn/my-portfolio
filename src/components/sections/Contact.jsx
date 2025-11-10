@@ -36,7 +36,20 @@ const Contact = () => {
         
         setIsSending(true);
 
-        
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(e.target)).toString(),
+        })
+        .then(() => {
+                toast.success(t('contact.email.success'));
+                setFormData({ name: "", email: "", message: "" });
+            })
+        .catch((error) => {
+                console.log("ERROR: ", error);
+                toast.error(t('contact.email.error'));
+            })
+            .finally(() => setIsSending(false));
     };
 
     const handleChange = (e) => {
@@ -134,7 +147,7 @@ const Contact = () => {
                     >
                         <Card className="shadow-xl border-gray-300">
                             <CardContent className="p-8">
-                                <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true">
+                                <form onSubmit={handleSubmit} className="space-y-6" name="contact" data-netlify="true">
                                     <input type="hidden" name="form-name" value="contact" /> {/* Esto es útil para Netlify */}
                                     <input name="bot-field" hidden />
                                     <div>

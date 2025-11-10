@@ -1,7 +1,23 @@
-<!-- en public/index.html o en tu componente, pero fuera del renderizado condicional si no se ve inicialmente -->
- <!-- Para enviar emails desde netlify -->
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <textarea name="message"></textarea>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Portfolio</title>
+  </head>
+  <body>
+    <noscript>Necesitas JavaScript para correr esta app.</noscript>
+    <div id="root"></div>
+
+    <!-- **ESTO ES LO IMPORTANTE** -->
+    <!-- Formulario oculto para que Netlify lo detecte durante el build -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    <!-- Fin del formulario oculto -->
+
+  </body>
+</html>
