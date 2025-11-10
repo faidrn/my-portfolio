@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { sendEmail } from "../ui/sendEmail";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
     const { t } = useLanguage();
@@ -26,29 +26,32 @@ const Contact = () => {
         return regex.test(email);
     };
 
-
-    // ✅ Manejo de envío
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { name, email, message } = formData;
-
-        if (!validateEmail(email)) {
-            toast.error(t("contact.email.invalid"));
+        // ✅ Validar email antes de enviar
+        if (!validateEmail(formData.email)) {
+            toast.error(t('contact.email.errorTypingEmail'));
             return;
         }
+        
+        setIsSending(true);
 
-        try {
-            setIsSending(true);
-            await sendEmail({ name, email, message });
-            toast.success(t('contact.email.success'));
-        setFormData({ name: "", email: "", message: "" }); // limpia el form
-        } catch (error) {
-            console.error("❌ Error al enviar email:", error);
-            toast.error(t('contact.email.error'));
-        } finally {
-            setIsSending(false);
-        }
+        emailjs
+            .send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formData,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+            )
+            .then(() => {
+                toast.success(t('contact.email.success'));
+                setFormData({ name: "", email: "", message: "" });
+            })
+            .catch(() => {
+                toast.error(t('contact.email.error'));
+            })
+            .finally(() => setIsSending(false));
     };
 
     const handleChange = (e) => {
