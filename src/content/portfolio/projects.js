@@ -43,7 +43,7 @@ export const projects = [
             },
             category: 'web',
             image: '/images/portfolio/tic-tac-toe-game.webp',
-            tags: ['React', 'Tailwind CSS', 'Node.js', 'npm'],
+            tags: ['React', 'Node.js', 'npm'],
             demoLink: 'https://faidrn.github.io/tic-tac-toe-game/',
             codeLink: 'https://github.com/faidrn/tic-tac-toe-game',
         },
