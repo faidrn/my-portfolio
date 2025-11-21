@@ -1,5 +1,21 @@
 export const projects = [
-        {
+    {
+        id: 13,
+        en: {
+            title: 'Snake Game with React and Tailwind CSS',
+            description: 'Snake Game is a modern remake of the classic Snake game. It features smooth movement, clean UI, and high modularity',
+        }, 
+        es: {
+            title: 'Juego de la Serpiente con React y Tailwind CSS',
+            description: 'Juego de la Serpiente es una versión moderna del clásico juego de la serpiente. Cuenta con movimiento suave, interfaz limpia y alta modularidad',
+        }, 
+        category: 'web',
+        image: '/images/portfolio/snake-game.webp',
+        tags: ['React', 'Vite', 'Tailwind CSS', 'npm'],
+        demoLink: '#https://snake-game-react-and-tailwind.netlify.app/',
+        codeLink: 'https://github.com/faidrn/my-snake-game',
+    },    
+    {
             id: 12,
             en: {
                 title: 'Modern React Portfolio',
