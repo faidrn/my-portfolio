@@ -12,7 +12,7 @@ export const projects = [
         category: 'web',
         image: '/images/portfolio/snake-game.webp',
         tags: ['React', 'Vite', 'Tailwind CSS', 'npm'],
-        demoLink: '#https://snake-game-react-and-tailwind.netlify.app/',
+        demoLink: 'https://snake-game-react-and-tailwind.netlify.app/',
         codeLink: 'https://github.com/faidrn/my-snake-game',
     },    
     {
