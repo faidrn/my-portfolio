@@ -1,5 +1,74 @@
 [
   {
+        "id": 2,
+        "title": "Snake Game en React — Tutorial",
+        "excerpt": "A modern remake of the classic Snake game using React.js. It offers smooth movement, a clear user interface, and high modularity.",
+        "date": "2025-12-02",
+        "readTime": 2,
+        "category": "Development",
+        "image": "/images/portfolio/snake-game.png",
+        "errorLoading": "Error loading blog",
+        "content": [
+            { "type": "heading", "text": "What we will build" },
+            { "type": "paragraph", "text": "A classic Snake game — with board, moving snake, random food, score, high score, pause, and restart — using React, hooks, and CSS (Tailwind or similar)." },
+
+            { "type": "heading", "text": "Setup the project" },
+            { "type": "numbered-list", "items": [
+                "Create a new project with Vite + React or Create React App.",
+                "Install React dependencies.",
+                "Create folder src/components/ and add components: Board, Controls, GameStats, GameOverModal."
+            ] },
+
+            { "type": "heading", "text": "Suggested folder structure" },
+            { "type": "code", "language": "plaintext", "text": "src/\n│   ├── components/\n│   │   ├── Board.jsx/\n│   │   ├── Controls.jsx/\n│   │   ├── GameStats.jsx/\n│   │   └── GameOverModal.jsx/\n│   ├── App.jsx\n│   ├── App.css\n│   ├── index.css\n│   └── main.jsx\n" },
+            
+            { "type": "heading", "text": "Main logic (in App.jsx)" },
+            { "type": "paragraph", "text": "Key states:" },
+            { "type": "list", "items": [
+                "snake: array of segments with {x, y}",
+                "food: food coordinates",
+                "direction, nextDirection: current and next direction",
+                "gameOver, isPaused: game state",
+                "score, highScore: player’s score and record",
+                "speed: how fast the game loop runs"
+            ] },
+
+            { "type": "paragraph", "text": "Core functions:" },
+            { "type": "list", "items": [
+                "getInitialSnake(): returns initial snake (3 segments)",
+                "getRandomFood(snake): random food position not in snake",
+                "resetGame(): reset all states",
+                "handleDirectionChange(newDirection): safely change direction (no 180° turns)",
+                "togglePause(): toggle pause/unpause"
+            ] },
+
+            { "type": "paragraph", "text": "Effects with useEffect:" },
+            { "type": "list", "items": [
+                "Keyboard listener for arrow keys / WASD / spacebar",
+                "Game loop: with setInterval, move snake, check collisions & food, update state"
+            ] },
+
+            { "type": "heading", "text": "endering board and snake (Board)" },
+            { "type": "list", "items": [
+                "Create a grid of gridSize × gridSize cells.",
+                "For each cell, compute coordinates (x, y), check if belongs to snake head/body/tail or food or empty.",
+                "Render with different styles depending on content."
+            ] },
+
+            { "type": "heading", "text": "Controls, Stats & Game Over Modal" },
+            { "type": "list", "items": [
+                "Controls: buttons (or keyboard) to change direction, pause, restart.",
+                "GameStats: show current score, high score, and status (playing / paused / game over).",
+                "GameOverModal: appears when game ends, shows score, high score, and restart button."
+            ] },
+
+            { "type": "heading", "text": "Example code snippet (overview)" },
+            { "type": "code", "language": "jsx", "text": "// … inside App.jsx\n\nconst GRID_SIZE = 20;\n\nconst getInitialSnake = () => [\n  { x: 10, y: 10 },\n  { x: 10, y: 11 },\n  { x: 10, y: 12 },\n];\n\nconst getRandomFood = (snake) => {\n  // Generates random food while avoiding the snake.\n};\n\n// states with useState:\n// snake, food, direction, nextDirection, score, highScore, speed, isPaused, gameOver\n\n// useEffect => keyboard listener\n// useEffect => game loop: setInterval to move the snake\n\n// In the return (JSX):\n// <Board snake={snake} food={food} gridSize={GRID_SIZE} />\n// <Controls … />\n// <GameStats … />\n// { gameOver && <GameOverModal … /> }" },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/my-snake-game" }
+        ]
+    },
+    {
         "id": 1,
         "title": "Creating a Modern React Portfolio",
         "excerpt": "Design and code your personal React portfolio with Vite and Tailwind — stylish, fast, and developer-friendly.",

@@ -177,6 +177,28 @@ const BlogPost = () => {
                                         {block.text}
                                     </a>
                                 );
+                            case "numbered-list":
+                                return (
+                                    <ol
+                                        key={index}
+                                        className="list-decimal ml-6 mb-4 space-y-1 text-[18px]"
+                                    >
+                                        {block.items?.map((item, itemIndex) => (
+                                            <li key={itemIndex}>{item}</li>
+                                        ))}
+                                    </ol>
+                                );
+                            case "list":
+                                return (
+                                    <ul
+                                        key={index}
+                                        className="list-disc ml-6 mb-4 space-y-1 text-[18px]"
+                                    >
+                                        {block.items?.map((item, itemIndex) => (
+                                            <li key={itemIndex}>{item}</li>
+                                        ))}
+                                    </ul>
+                                );
                             default:
                                 return null;
                         }
