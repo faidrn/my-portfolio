@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/badge";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { projects } from '../../content/portfolio/projects';
 
@@ -11,13 +11,35 @@ const Portfolio = () => {
     const { t, language  } = useLanguage();     // Extraer el lenguaje para cambiar de idioma, ya que t es la función traductora
     const [activeFilter, setActiveFilter] = useState('all');
 
-    const filters = ['all', 'web', 'mobile', 'design', 'python'];
+    // Pagination variables
+    const [currentPage, setCurrentPage] = useState(1);
+    const projectsPerPage = 6;
 
-    
+    //const filters = ['all', 'web', 'mobile', 'design', 'python'];
+    const filters = ['all', 'web', 'python'];
 
     const filteredProjects = activeFilter === 'all' 
         ? projects 
         : projects.filter(project => project.category === activeFilter);
+
+    
+    // Calculate pagination
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Reset to page 1 when filter changes
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    // Scroll to portfolio section smoothly
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
 
     return (
@@ -46,7 +68,7 @@ const Portfolio = () => {
                             <Button
                                 key={filter}
                                 variant={activeFilter === filter ? 'default' : 'outline'}
-                                onClick={() => setActiveFilter(filter)}
+                                onClick={() => handleFilterChange(filter)}
                                 className={
                                     activeFilter === filter
                                         ? 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -61,7 +83,7 @@ const Portfolio = () => {
 
                 {/** Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredProjects.map((project, index) => (
+                    {currentProjects.map((project, index) => (
                         <motion.div
                             key={project.id}
                             initial={{ opacity: 0, y: 20 }}
@@ -122,6 +144,51 @@ const Portfolio = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="flex justify-center items-center gap-2 mt-12"
+                >
+                    {/* Previous Button */}
+                    <Button
+                        variant="outline"
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className="disabled:opacity-60 disabled:cursor-not-allowed border-gray-300"
+                    >
+                        <FiChevronLeft className={`w-4 h-4 ${currentPage === 1 ? 'text-gray-400' : ''}`} />
+                    </Button>
+
+                    {/* Page Numbers */}
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+                        <Button
+                            key={pageNumber}
+                            variant={currentPage === pageNumber ? 'default' : 'outline'}
+                            onClick={() => handlePageChange(pageNumber)}
+                            className={`min-w-10] ${
+                            currentPage === pageNumber ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border-gray-300'
+                            }`}
+                        >
+                            {pageNumber}
+                        </Button>
+                    ))}
+
+                    {/* Next Button */}
+                    <Button
+                        variant="outline"
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                        className="disabled:opacity-60 disabled:cursor-not-allowed border-gray-300"
+                    >
+                        <FiChevronRight className={`w-4 h-4 ${currentPage === totalPages ? 'text-gray-400' : ''}`} />
+                    </Button>
+                </motion.div>
+                )}
             </div>
         </section>
     );
