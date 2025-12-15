@@ -1,4 +1,129 @@
 [
+    {
+        "id": 3,
+        "title": "Tutorial: How to Build Your Own Weather Forecast App with Foreweather",
+        "excerpt": "Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies.",
+        "date": "2025-12-15",
+        "readTime": 2,
+        "category": "Development",
+        "image": "/images/portfolio/Foreweather-app_en.png",
+        "errorLoading": "Error loading blog",
+        "content": [
+            { "type": "paragraph", "text": "Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies. It is built with:" },
+            { "type": "list", "items": [
+                "React 💙 – UI library for reactive interfaces",
+                "Vite 🔥 – ultra-fast frontend bundler",
+                "Tailwind CSS 💅 – utility-first CSS framework",
+                "Open-Meteo API 🌤️ – free weather API with no API key required"
+            ] },
+
+            { "type": "heading", "text": "What Will You Learn in This Tutorial?" },
+            { "type": "numbered-list", "items": [
+                "How to clone and run the project locally",
+                "How the integration with the Open-Meteo API works",
+                "How the project is structured using React + Vite + Tailwind",
+                "How to extend or customize the app (for example, adding geolocation)"
+            ] },
+
+            { "type": "heading", "text": "1. Clone the Project" },
+            { "type": "paragraph", "text": "First, open your terminal and clone the repository:" },
+            { "type": "code", "language": "plaintext", "text": "git clone https://github.com/faidrn/foreweather.git\ncd foreweather" },
+            { "type": "paragraph", "text": "This will download the source code to your machine." },
+            
+            { "type": "heading", "text": "2. Install Dependencies and Run the App" },
+            { "type": "paragraph", "text": "Make sure you have Node.js installed (v14+ recommended). Then install the dependencies:" },
+            { "type": "code", "language": "plaintext", "text": "npm install" },
+            { "type": "paragraph", "text": "Start the development server:" },
+            { "type": "code", "language": "plaintext", "text": "npm run dev" },
+            { "type": "paragraph", "text": "This will launch a local server (usually at http://localhost:5173) where you can see the app running." },
+
+            { "type": "heading", "text": "3. How Does the App Get Weather Data?" },
+            { "type": "paragraph", "text": "Foreweather uses the Open-Meteo API, a free weather forecast service that does not require an API key and provides JSON data such as temperature, wind, rain, and forecasts." },
+
+            { "type": "subtitle", "text": "Example API Request" },
+            { "type": "paragraph", "text": "A typical request to get weather data for specific coordinates looks like this:" },
+            { "type": "code", "language": "plaintext", "text": "https://api.open-meteo.com/v1/forecast?\nlatitude=48.15&\nlongitude=17.12&\ncurrent_weather=true" },
+            { "type": "paragraph", "text": "The response includes:" },
+            { "type": "list", "items": [
+                "Current temperature 🌡️",
+                "Wind speed 💨",
+                "Sky conditions ☁️",
+                "Hourly and daily forecast data ✨"
+            ] },
+            { "type": "paragraph", "text": "This makes it easy to build rich real-time weather interfaces." },
+
+            { "type": "heading", "text": "4. Project Structure" },
+            { "type": "paragraph", "text": "After cloning the repository, you’ll find a structure similar to this:" },
+            { "type": "code", "language": "plaintext", "text": "foreweather/
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.jsx
+│   └── index.jsx
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+" },
+            { "type": "list", "items": [
+                "src/ – main source code",
+                "App.jsx – root React component",
+                "components/ – UI components (such as weather cards)",
+                "tailwind.config.js – Tailwind CSS configuration",
+                "vite.config.js – Vite bundler configuration"
+            ] },
+
+            { "type": "heading", "text": "5. How the Main Component Works" },
+            { "type": "paragraph", "text": "Although the full source code isn’t shown here, the typical flow in a React + Open-Meteo app is:" },
+            { "type": "numbered-list", "items": [
+                "Request data from the API using fetch() or axios",
+                "Store the response in React state (useState)",
+                "Render the weather data in UI components (temperature, wind, icons, etc.)"
+            ] },
+            { "type": "paragraph", "text": "Simplified Example" },
+            { "type": "code", "language": "jsx", "text": "useEffect(() => {
+  fetch(`https://api.open-meteo.com/v1/forecast?...`)
+    .then(res => res.json())
+    .then(data => setWeather(data.current_weather))
+}, [coords])
+" },
+
+            { "type": "heading", "text": "6. How to Customize the App" },
+            { "type": "subtitle", "text": "1. Add Geolocation" },
+            { "type": "paragraph", "text": "You can ask the browser for the user’s location:" },
+            { "type": "code", "language": "js", "text": "navigator.geolocation.getCurrentPosition(position => {
+  setCoords({
+    lat: position.coords.latitude,
+    lon: position.coords.longitude
+  });
+});
+" },
+            { "type": "paragraph", "text": "This allows the app to automatically display weather for the user’s current location." },
+
+            { "type": "subtitle", "text": "2. Show Extended Forecasts" },
+            { "type": "paragraph", "text": "Open-Meteo supports hourly and daily forecasts:" },
+            { "type": "code", "language": "plaintext", "text": "hourly=temperature_2m,precipitation\ndaily=temperature_2m_max,temperature_2m_min" },
+            { "type": "paragraph", "text": "You can display this data using lists, cards, or animated charts." },
+
+            { "type": "heading", "text": "7. Production Best Practices" },
+            { "type": "paragraph", "text": "When your app is ready for deployment:" },
+            { "type": "paragraph", "text": "Create an optimized build:" },
+            { "type": "code", "language": "plaintext", "text": "npm run build" },
+            { "type": "paragraph", "text": "Upload the dist/ folder to your favorite hosting service (Netlify, Vercel, GitHub Pages)." },
+
+            { "type": "heading", "text": "Conclusion" },
+            { "type": "paragraph", "text": "With Foreweather, you have a solid foundation for a portfolio or blog project: a modern weather app built with React + Vite + Tailwind CSS, powered by a real and free weather API.
+
+You can enhance it further with features like:" },
+            { "type": "list", "items": [
+                "Unit switching (°C ↔ °F)",
+                "Automatic geolocation",
+                "Animated forecast charts"
+            ] },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/foreweather" }
+        ]
+    },
   {
         "id": 2,
         "title": "Snake Game en React — Tutorial",
