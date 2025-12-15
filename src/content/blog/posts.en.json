@@ -11,10 +11,10 @@
         "content": [
             { "type": "paragraph", "text": "Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies. It is built with:" },
             { "type": "list", "items": [
-                "React 💙 – UI library for reactive interfaces",
-                "Vite 🔥 – ultra-fast frontend bundler",
-                "Tailwind CSS 💅 – utility-first CSS framework",
-                "Open-Meteo API 🌤️ – free weather API with no API key required"
+                "React 💙 – UI library for reactive interfaces.",
+                "Vite 🔥 – ultra-fast frontend bundler.",
+                "Tailwind CSS 💅 – utility-first CSS framework.",
+                "Open-Meteo API 🌤️ – free weather API with no API key required."
             ] },
 
             { "type": "heading", "text": "What Will You Learn in This Tutorial?" },

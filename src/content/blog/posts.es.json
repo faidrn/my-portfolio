@@ -11,10 +11,10 @@
         "content": [
             { "type": "paragraph", "text": "Foreweather es una aplicación web que muestra el pronóstico del tiempo personal usando tecnologías modernas de frontend. Está construida con:" },
             { "type": "list", "items": [
-                "React 💙 – biblioteca UI para interfaces reactivas",
-                "Vite 🔥 – empaquetador frontend ultrarrápido",
-                "Tailwind CSS 💅 – framework utility-first para estilos",
-                "Open-Meteo API 🌤️ – API gratuita para datos meteorológicos sin necesidad de clave de API"
+                "React 💙 – biblioteca UI para interfaces reactivas.",
+                "Vite 🔥 – empaquetador frontend ultrarrápido.",
+                "Tailwind CSS 💅 – framework utility-first para estilos.",
+                "Open-Meteo API 🌤️ – API gratuita para datos meteorológicos sin necesidad de clave de API."
             ] },
 
             { "type": "heading", "text": "¿Qué vas a aprender en este tutorial?" },

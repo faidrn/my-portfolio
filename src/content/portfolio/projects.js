@@ -1,5 +1,21 @@
 export const projects = [
     {
+        id: 14,
+        en: {
+            title: 'Weather Forecast App with with React and Tailwind CSS',
+            description: 'Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies',
+        }, 
+        es: {
+            title: 'App de Pronóstico del Clima con React y Tailwind CSS',
+            description: 'Foreweather es una aplicación web que muestra el pronóstico del tiempo personal usando tecnologías modernas de frontend',
+        }, 
+        category: 'web',
+        image: '/images/portfolio/foreweather.webp',
+        tags: ['React', 'Vite', 'Tailwind CSS', 'npm', 'API'],
+        demoLink: 'https://faidrn.github.io/foreweather/',
+        codeLink: 'https://github.com/faidrn/foreweather',
+    },
+    {
         id: 13,
         en: {
             title: 'Snake Game with React and Tailwind CSS',
