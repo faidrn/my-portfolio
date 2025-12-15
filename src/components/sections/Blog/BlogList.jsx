@@ -25,7 +25,7 @@ const BlogList = () => {
         // Cargar los metadatos según idioma
         import(`../../../content/blog/posts.${language}.json`)
         .then((data) => setPosts(data.default))
-        .catch(() => setPosts([]));
+        .catch((err) => setPosts([]));
     }, [language]);
 
     

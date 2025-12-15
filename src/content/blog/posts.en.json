@@ -11,10 +11,10 @@
         "content": [
             { "type": "paragraph", "text": "Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies. It is built with:" },
             { "type": "list", "items": [
-                "React 💙 – UI library for reactive interfaces.",
-                "Vite 🔥 – ultra-fast frontend bundler.",
-                "Tailwind CSS 💅 – utility-first CSS framework.",
-                "Open-Meteo API 🌤️ – free weather API with no API key required."
+                "React – UI library for reactive interfaces.",
+                "Vite – ultra-fast frontend bundler.",
+                "Tailwind CSS – utility-first CSS framework.",
+                "Open-Meteo API – free weather API with no API key required."
             ] },
 
             { "type": "heading", "text": "What Will You Learn in This Tutorial?" },
@@ -45,26 +45,16 @@
             { "type": "code", "language": "plaintext", "text": "https://api.open-meteo.com/v1/forecast?\nlatitude=48.15&\nlongitude=17.12&\ncurrent_weather=true" },
             { "type": "paragraph", "text": "The response includes:" },
             { "type": "list", "items": [
-                "Current temperature 🌡️",
-                "Wind speed 💨",
-                "Sky conditions ☁️",
-                "Hourly and daily forecast data ✨"
+                "Current temperature",
+                "Wind speed",
+                "Sky conditions",
+                "Hourly and daily forecast data"
             ] },
             { "type": "paragraph", "text": "This makes it easy to build rich real-time weather interfaces." },
 
             { "type": "heading", "text": "4. Project Structure" },
             { "type": "paragraph", "text": "After cloning the repository, you’ll find a structure similar to this:" },
-            { "type": "code", "language": "plaintext", "text": "foreweather/
-├── public/
-├── src/
-│   ├── components/
-│   ├── App.jsx
-│   └── index.jsx
-├── package.json
-├── tailwind.config.js
-├── vite.config.js
-└── README.md
-" },
+            { "type": "code", "language": "plaintext", "text": "foreweather/\n├── public/\n├── src/\n│   ├── components/\n│   ├── App.jsx\n│   └── index.jsx\n├── package.json\n├── tailwind.config.js\n├── vite.config.js\n└── README.md" },
             { "type": "list", "items": [
                 "src/ – main source code",
                 "App.jsx – root React component",
@@ -81,23 +71,12 @@
                 "Render the weather data in UI components (temperature, wind, icons, etc.)"
             ] },
             { "type": "paragraph", "text": "Simplified Example" },
-            { "type": "code", "language": "jsx", "text": "useEffect(() => {
-  fetch(`https://api.open-meteo.com/v1/forecast?...`)
-    .then(res => res.json())
-    .then(data => setWeather(data.current_weather))
-}, [coords])
-" },
+            { "type": "code", "language": "jsx", "text": "useEffect(() => {\n  fetch(`https://api.open-meteo.com/v1/forecast?...`)\n    .then(res => res.json())\n    .then(data => setWeather(data.current_weather))\n}, [coords])" },
 
             { "type": "heading", "text": "6. How to Customize the App" },
             { "type": "subtitle", "text": "1. Add Geolocation" },
             { "type": "paragraph", "text": "You can ask the browser for the user’s location:" },
-            { "type": "code", "language": "js", "text": "navigator.geolocation.getCurrentPosition(position => {
-  setCoords({
-    lat: position.coords.latitude,
-    lon: position.coords.longitude
-  });
-});
-" },
+            { "type": "code", "language": "js", "text": "navigator.geolocation.getCurrentPosition(position => {\n  setCoords({\n    lat: position.coords.latitude,\n    lon: position.coords.longitude\n  });\n});" },
             { "type": "paragraph", "text": "This allows the app to automatically display weather for the user’s current location." },
 
             { "type": "subtitle", "text": "2. Show Extended Forecasts" },
@@ -112,9 +91,7 @@
             { "type": "paragraph", "text": "Upload the dist/ folder to your favorite hosting service (Netlify, Vercel, GitHub Pages)." },
 
             { "type": "heading", "text": "Conclusion" },
-            { "type": "paragraph", "text": "With Foreweather, you have a solid foundation for a portfolio or blog project: a modern weather app built with React + Vite + Tailwind CSS, powered by a real and free weather API.
-
-You can enhance it further with features like:" },
+            { "type": "paragraph", "text": "With Foreweather, you have a solid foundation for a portfolio or blog project: a modern weather app built with React + Vite + Tailwind CSS, powered by a real and free weather API.\n\nYou can enhance it further with features like:" },
             { "type": "list", "items": [
                 "Unit switching (°C ↔ °F)",
                 "Automatic geolocation",
