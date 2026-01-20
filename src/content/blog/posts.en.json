@@ -1,5 +1,86 @@
 [
     {
+        "id": 4,
+        "title": "Blog: How to Build My Next.js E‑commerce",
+        "excerpt": "Welcome to this step‑by‑step tutorial on building a modern e‑commerce website using Next.js, React, and Tailwind CSS. We’ll walk through the entire project called My Next.js E‑commerce, explain its architecture, install it locally, explore key features like the shopping cart and admin panel, and finally deploy it. The goal is to teach you how to structure and understand a real e‑commerce frontend project.",
+        "date": "2026-01-20",
+        "readTime": 2,
+        "category": "Development",
+        "image": "/images/portfolio/my-nextjs-ecommerce-en.png",
+        "errorLoading": "Error loading blog",
+        "content": [
+            { "type": "heading", "text": "Project Overview" },
+            { "type": "paragraph", "text": "My Next.js E‑commerce is an e‑commerce app built with Next.js and React. It includes features such as:" },
+            { "type": "list", "items": [
+                "Product catalog with filters and search",
+                "Product detail pages with add‑to‑cart functionality",
+                "Global cart management using React Context API",
+                "Admin panel for managing products, categories, and users",
+                "Responsive design"
+            ] },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/homepage.png", "alt": "product listing" },
+
+            { "type": "heading", "text": "Technologies Used" },
+            { "type": "paragraph", "text": "This project uses:" },
+            { "type": "list", "items": [
+                "Next.js – React framework with SSR and SSG",
+                "React – UI library",
+                "Context API – State management (cart, theme, language, auth)",
+                "Tailwind CSS – Utility‑first styling",
+                "Netlify – Suggested deployment platform"
+            ] },
+
+            { "type": "heading", "text": "Installation" },
+            { "type": "paragraph", "text": "1. Clone the repository" },
+            { "type": "code", "language": "plaintext", "text": "git clone https://github.com/faidrn/my-nextjs-ecommerce.git" },
+
+            { "type": "paragraph", "text": "2. Go to the project folder" },
+            { "type": "code", "language": "plaintext", "text": "cd my-nextjs-ecommerce" },
+
+            { "type": "paragraph", "text": "3. Install dependencies" },
+            { "type": "code", "language": "plaintext", "text": "npm install\n# or\nyarn install\n" },
+
+            { "type": "paragraph", "text": "4. Run the development server" },
+            { "type": "code", "language": "plaintext", "text": "npm run dev\n# or\nyarn dev\n" },
+            
+            { "type": "paragraph", "text": "Open http://localhost:3000 to view the application." },
+
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/terminal.png", "alt": "dev server running" },
+
+            { "type": "heading", "text": "Project Structure" },
+            { "type": "paragraph", "text": "Here's the simplified structure of the app:" },
+            { "type": "code", "language": "plaintext", "text": "my-nextjs-ecommerce/\n│\n├─ src/\n│  ├─ app/                   # Main pages & routing\n│  ├─ components/            # UI and functional components\n│  │  ├─ product/            # Product UI pieces\n│  │  ├─ admin/              # Admin Panel\n│  │  └─ ui/                 # Reusable UI\n│  ├─ context/               # React contexts (Cart, Theme, Language, Auth)\n│\n├─ public/                   # Static assets\n├─ package.json              # Dependencies & scripts\n└─ README.md" },
+
+            { "type": "heading", "text": "Key Features" },
+            { "type": "subtitle", "text": "Product Catalog" },
+            { "type": "paragraph", "text": "Users can browse products, view product details, and filter results by categories or search terms." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/product-listing.png", "alt": "Product Detail" },
+            
+            { "type": "subtitle", "text": "Shopping Cart" },
+            { "type": "paragraph", "text": "The cart uses React Context to maintain state globally across the app." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/cart.png", "alt": "Shopping Cart" },
+            
+            { "type": "subtitle", "text": "Admin Panel" },
+            { "type": "paragraph", "text": "Admins can manage products, users, and categories. This section involves UI components specific to the admin area." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/admin-dashboard.png", "alt": "Admin Panel" },
+
+            { "type": "subtitle", "text": "Deployment" },
+            { "type": "paragraph", "text": "For deployment, you can use Netlify or Vercel. Netlify works especially well for static portions of the site, while Vercel excels with Next.js server capabilities." },
+            { "type": "paragraph", "text": "Deployment steps (general):" },
+            { "type": "list", "items": [
+                "Push your code to GitHub",
+                "Connect to Vercel/Netlify",
+                "Add environment variables (if needed)",
+                "Deploy"
+            ] },
+
+            { "type": "heading", "text": "Summary" },
+            { "type": "paragraph", "text": "This blog taught you how to set up and understand a full e‑commerce frontend built with Next.js. You should now feel confident cloning, running, and modifying this project." },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/my-nextjs-ecommerce" }
+        ]
+    },
+    {
         "id": 3,
         "title": "Tutorial: How to Build Your Own Weather Forecast App with Foreweather",
         "excerpt": "Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies.",
