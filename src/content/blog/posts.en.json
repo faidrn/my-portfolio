@@ -1,7 +1,7 @@
 [
     {
         "id": 4,
-        "title": "Blog: How to Build My Next.js E‑commerce",
+        "title": "How to Build My Next.js E‑commerce",
         "excerpt": "Welcome to this step‑by‑step tutorial on building a modern e‑commerce website using Next.js, React, and Tailwind CSS. We’ll walk through the entire project called My Next.js E‑commerce, explain its architecture, install it locally, explore key features like the shopping cart and admin panel, and finally deploy it. The goal is to teach you how to structure and understand a real e‑commerce frontend project.",
         "date": "2026-01-20",
         "readTime": 2,
@@ -77,7 +77,7 @@
             { "type": "heading", "text": "Summary" },
             { "type": "paragraph", "text": "This blog taught you how to set up and understand a full e‑commerce frontend built with Next.js. You should now feel confident cloning, running, and modifying this project." },
 
-            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/my-nextjs-ecommerce" }
+            { "type": "link", "text": "View on GitHub", "href": "https://github.com/faidrn/my-nextjs-ecommerce" }
         ]
     },
     {

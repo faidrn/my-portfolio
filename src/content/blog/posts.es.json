@@ -1,5 +1,86 @@
 [
     {
+        "id": 4,
+        "title": "Como Crear Mi E‑commerce con Next.js",
+        "excerpt": "Bienvenido a este tutorial paso a paso para construir un sitio de comercio electrónico moderno usando Next.js, React y Tailwind CSS. Exploraremos en detalle el proyecto My Next.js E‑commerce, cómo instalarlo, cómo funciona el carrito de compras y el panel de administración, y cómo desplegarlo. El objetivo es que aprendas cómo estructurar y comprender un proyecto real de frontend e‑commerce.",
+        "date": "2026-01-20",
+        "readTime": 2,
+        "category": "Development",
+        "image": "/images/portfolio/my-nextjs-ecommerce-es.png",
+        "errorLoading": "Error al cargar el blog",
+        "content": [
+            { "type": "heading", "text": "Resumen del Proyecto" },
+            { "type": "paragraph", "text": "My Next.js E‑commerce es una aplicación de comercio electrónico construida con Next.js y React. Incluye características como:" },
+            { "type": "list", "items": [
+                "Catálogo de productos con filtros y búsqueda",
+                "Páginas de producto con funcionalidad de añadir al carrito",
+                "Gestión global del carrito usando React Context API",
+                "Panel de administración para gestionar productos, categorías y usuarios",
+                "Diseño responsivo y soporte de temas"
+            ] },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/homepage.png", "alt": "product listing" },
+
+            { "type": "heading", "text": "Tecnologías Utilizadas" },
+            { "type": "paragraph", "text": "Este proyecto utiliza:" },
+            { "type": "list", "items": [
+                "Next.js – Framework de React con SSR y SSG",
+                "React – Biblioteca de IU",
+                "Context API – Manejo de estado (carrito, tema, idioma, autenticación)",
+                "Tailwind CSS – Estilos con utilidades",
+                "Netlify – Plataforma de despliegue sugerida"
+            ] },
+
+            { "type": "heading", "text": "Instalación" },
+            { "type": "paragraph", "text": "1. Clona el repositorio" },
+            { "type": "code", "language": "plaintext", "text": "git clone https://github.com/faidrn/my-nextjs-ecommerce.git" },
+
+            { "type": "paragraph", "text": "2. Entra en la carpeta del proyecto" },
+            { "type": "code", "language": "plaintext", "text": "cd my-nextjs-ecommerce" },
+
+            { "type": "paragraph", "text": "3. Instala las dependencias" },
+            { "type": "code", "language": "plaintext", "text": "npm install\n# or\nyarn install\n" },
+
+            { "type": "paragraph", "text": "4. Ejecuta el servidor de desarrollo" },
+            { "type": "code", "language": "plaintext", "text": "npm run dev\n# or\nyarn dev\n" },
+            
+            { "type": "paragraph", "text": "Abre http://localhost:3000 para ver la aplicación." },
+
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/terminal.png", "alt": "dev server running" },
+
+            { "type": "heading", "text": "Estructura del Proyecto" },
+            { "type": "paragraph", "text": "Esta es la estructura simplificada:" },
+            { "type": "code", "language": "plaintext", "text": "my-nextjs-ecommerce/\n│\n├─ src/\n│  ├─ app/                   # Páginas y rutas principales\n│  ├─ components/            # Componentes UI y funcionales\n│  │  ├─ product/            # UI de Producto\n│  │  ├─ admin/              # Panel de Administración\n│  │  └─ ui/                 # Componentes reutilizables\n│  ├─ context/               # Contextos de React (Carrito, Tema, Idioma, Auth)\n│\n├─ public/                   # Recursos estáticos\n├─ package.json              # Dependencias y scripts\n└─ README.md" },
+
+            { "type": "heading", "text": "Características Clave" },
+            { "type": "subtitle", "text": "Catálogo de Productos" },
+            { "type": "paragraph", "text": "Los usuarios pueden explorar productos, ver detalles de producto y filtrar resultados por categorías o búsquedas." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/product-listing.png", "alt": "Product Detail" },
+            
+            { "type": "subtitle", "text": "Carrito de Compras" },
+            { "type": "paragraph", "text": "El carrito usa React Context para mantener el estado en toda la aplicación." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/cart.png", "alt": "Shopping Cart" },
+            
+            { "type": "subtitle", "text": "Panel de Administración" },
+            { "type": "paragraph", "text": "Los administradores pueden gestionar productos, usuarios y categorías." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/admin-dashboard.png", "alt": "Admin Panel" },
+
+            { "type": "subtitle", "text": "Despliegue" },
+            { "type": "paragraph", "text": "Para el despliegue, puedes usar **Netlify** o **Vercel**. Netlify funciona bien para partes estáticas, mientras que Vercel es ideal para Next.js." },
+            { "type": "paragraph", "text": "Pasos para el despliegue (general):" },
+            { "type": "list", "items": [
+                "Sube tu código a GitHub",
+                "Conectarse a Vercel/Netlify",
+                "Agregar variables de entorno (si es necesario)",
+                "Desplegar"
+            ] },
+
+            { "type": "heading", "text": "Resumen" },
+            { "type": "paragraph", "text": "Este blog te enseñó cómo configurar y entender un frontend completo de e‑commerce con Next.js. Ahora deberías sentirte listo para clonar, ejecutar y modificar este proyecto." },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/my-nextjs-ecommerce" }
+        ]
+    },
+    {
         "id": 3,
         "title": "Tutorial: Cómo crear tu propia app de pronóstico del clima con Foreweather",
         "excerpt": "Foreweather es una aplicación web que muestra el pronóstico del tiempo personal usando tecnologías modernas de frontend.",
