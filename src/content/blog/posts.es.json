@@ -65,7 +65,7 @@
             { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/admin-dashboard.png", "alt": "Admin Panel" },
 
             { "type": "subtitle", "text": "Despliegue" },
-            { "type": "paragraph", "text": "Para el despliegue, puedes usar **Netlify** o **Vercel**. Netlify funciona bien para partes estáticas, mientras que Vercel es ideal para Next.js." },
+            { "type": "paragraph", "text": "Para el despliegue, puedes usar Netlify o Vercel. Netlify funciona bien para partes estáticas, mientras que Vercel es ideal para Next.js." },
             { "type": "paragraph", "text": "Pasos para el despliegue (general):" },
             { "type": "list", "items": [
                 "Sube tu código a GitHub",
