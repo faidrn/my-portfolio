@@ -1,8 +1,24 @@
 export const projects = [
     {
+        id: 15,
+        en: {
+            title: 'My Next.js E‑commerce with Next.js and Tailwind CSS',
+            description: 'My Next.js E-commerce is an e-commerce application built with Next.js and React, featuring modern functionalities such as a shopping cart, product filters, and an admin panel to manage users, products, and categories.',
+        }, 
+        es: {
+            title: 'Mi E-commerce con Next.js y Tailwind CSS',
+            description: 'My Next.js E-commerce es una aplicación de comercio electrónico creada con Next.js y React, que presenta funcionalidades modernas como un carrito de compras, filtros de productos y un panel de administración para gestionar usuarios, productos y categorías.',
+        }, 
+        category: 'web',
+        image: '/images/blog/my-nextjs-ecommerce/homepage.png',
+        tags: ['Next.js', 'Node.js', 'Tailwind CSS', 'npm', 'API'],
+        demoLink: 'https://my-nextjs-ecommerce.netlify.app/',
+        codeLink: 'https://github.com/faidrn/my-nextjs-ecommerce',
+    },
+    {
         id: 14,
         en: {
-            title: 'Weather Forecast App with with React and Tailwind CSS',
+            title: 'Weather Forecast App with React and Tailwind CSS',
             description: 'Foreweather is a web application that displays personalized weather forecasts using modern frontend technologies',
         }, 
         es: {

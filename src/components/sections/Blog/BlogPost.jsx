@@ -126,6 +126,16 @@ const BlogPost = () => {
                                     </h3>
 
                                 );
+                            case "subtitle":
+                                return (
+                                    <h3 
+                                        key={index}
+                                        className="text-xl font-bold mb-4 w-full"
+                                    >
+                                        {block.text}
+                                    </h3>
+
+                                );
                             case "table":
                                 return (
                                     <div

@@ -1,4 +1,187 @@
 [
+    {
+        "id": 4,
+        "title": "Como Crear Mi E‑commerce con Next.js",
+        "excerpt": "Bienvenido a este tutorial paso a paso para construir un sitio de comercio electrónico moderno usando Next.js, React y Tailwind CSS. Exploraremos en detalle el proyecto My Next.js E‑commerce, cómo instalarlo, cómo funciona el carrito de compras y el panel de administración, y cómo desplegarlo. El objetivo es que aprendas cómo estructurar y comprender un proyecto real de frontend e‑commerce.",
+        "date": "2026-01-20",
+        "readTime": 2,
+        "category": "Development",
+        "image": "/images/portfolio/my-nextjs-ecommerce-es.png",
+        "errorLoading": "Error al cargar el blog",
+        "content": [
+            { "type": "heading", "text": "Resumen del Proyecto" },
+            { "type": "paragraph", "text": "My Next.js E‑commerce es una aplicación de comercio electrónico construida con Next.js y React. Incluye características como:" },
+            { "type": "list", "items": [
+                "Catálogo de productos con filtros y búsqueda",
+                "Páginas de producto con funcionalidad de añadir al carrito",
+                "Gestión global del carrito usando React Context API",
+                "Panel de administración para gestionar productos, categorías y usuarios",
+                "Diseño responsivo y soporte de temas"
+            ] },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/homepage.png", "alt": "product listing" },
+
+            { "type": "heading", "text": "Tecnologías Utilizadas" },
+            { "type": "paragraph", "text": "Este proyecto utiliza:" },
+            { "type": "list", "items": [
+                "Next.js – Framework de React con SSR y SSG",
+                "React – Biblioteca de IU",
+                "Context API – Manejo de estado (carrito, tema, idioma, autenticación)",
+                "Tailwind CSS – Estilos con utilidades",
+                "Netlify – Plataforma de despliegue sugerida"
+            ] },
+
+            { "type": "heading", "text": "Instalación" },
+            { "type": "paragraph", "text": "1. Clona el repositorio" },
+            { "type": "code", "language": "plaintext", "text": "git clone https://github.com/faidrn/my-nextjs-ecommerce.git" },
+
+            { "type": "paragraph", "text": "2. Entra en la carpeta del proyecto" },
+            { "type": "code", "language": "plaintext", "text": "cd my-nextjs-ecommerce" },
+
+            { "type": "paragraph", "text": "3. Instala las dependencias" },
+            { "type": "code", "language": "plaintext", "text": "npm install\n# or\nyarn install\n" },
+
+            { "type": "paragraph", "text": "4. Ejecuta el servidor de desarrollo" },
+            { "type": "code", "language": "plaintext", "text": "npm run dev\n# or\nyarn dev\n" },
+            
+            { "type": "paragraph", "text": "Abre http://localhost:3000 para ver la aplicación." },
+
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/terminal.png", "alt": "dev server running" },
+
+            { "type": "heading", "text": "Estructura del Proyecto" },
+            { "type": "paragraph", "text": "Esta es la estructura simplificada:" },
+            { "type": "code", "language": "plaintext", "text": "my-nextjs-ecommerce/\n│\n├─ src/\n│  ├─ app/                   # Páginas y rutas principales\n│  ├─ components/            # Componentes UI y funcionales\n│  │  ├─ product/            # UI de Producto\n│  │  ├─ admin/              # Panel de Administración\n│  │  └─ ui/                 # Componentes reutilizables\n│  ├─ context/               # Contextos de React (Carrito, Tema, Idioma, Auth)\n│\n├─ public/                   # Recursos estáticos\n├─ package.json              # Dependencias y scripts\n└─ README.md" },
+
+            { "type": "heading", "text": "Características Clave" },
+            { "type": "subtitle", "text": "Catálogo de Productos" },
+            { "type": "paragraph", "text": "Los usuarios pueden explorar productos, ver detalles de producto y filtrar resultados por categorías o búsquedas." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/product-listing.png", "alt": "Product Detail" },
+            
+            { "type": "subtitle", "text": "Carrito de Compras" },
+            { "type": "paragraph", "text": "El carrito usa React Context para mantener el estado en toda la aplicación." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/cart.png", "alt": "Shopping Cart" },
+            
+            { "type": "subtitle", "text": "Panel de Administración" },
+            { "type": "paragraph", "text": "Los administradores pueden gestionar productos, usuarios y categorías." },
+            { "type": "image", "src": "/images/blog/my-nextjs-ecommerce/admin-dashboard.png", "alt": "Admin Panel" },
+
+            { "type": "subtitle", "text": "Despliegue" },
+            { "type": "paragraph", "text": "Para el despliegue, puedes usar Netlify o Vercel. Netlify funciona bien para partes estáticas, mientras que Vercel es ideal para Next.js." },
+            { "type": "paragraph", "text": "Pasos para el despliegue (general):" },
+            { "type": "list", "items": [
+                "Sube tu código a GitHub",
+                "Conectarse a Vercel/Netlify",
+                "Agregar variables de entorno (si es necesario)",
+                "Desplegar"
+            ] },
+
+            { "type": "heading", "text": "Resumen" },
+            { "type": "paragraph", "text": "Este blog te enseñó cómo configurar y entender un frontend completo de e‑commerce con Next.js. Ahora deberías sentirte listo para clonar, ejecutar y modificar este proyecto." },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/my-nextjs-ecommerce" }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Tutorial: Cómo crear tu propia app de pronóstico del clima con Foreweather",
+        "excerpt": "Foreweather es una aplicación web que muestra el pronóstico del tiempo personal usando tecnologías modernas de frontend.",
+        "date": "2025-12-15",
+        "readTime": 2,
+        "category": "Desarrollo",
+        "image": "/images/portfolio/Foreweather-app.png",
+        "errorLoading": "Error al cargar el blog",
+        "content": [
+            { "type": "paragraph", "text": "Foreweather es una aplicación web que muestra el pronóstico del tiempo personal usando tecnologías modernas de frontend. Está construida con:" },
+            { "type": "list", "items": [
+                "React – biblioteca UI para interfaces reactivas.",
+                "Vite – empaquetador frontend ultrarrápido.",
+                "Tailwind CSS – framework utility-first para estilos.",
+                "Open-Meteo API – API gratuita para datos meteorológicos sin necesidad de clave de API."
+            ] },
+
+            { "type": "heading", "text": "¿Qué vas a aprender en este tutorial?" },
+            { "type": "numbered-list", "items": [
+                "Cómo clonar y ejecutar el proyecto en tu máquina local",
+                "Cómo funciona la integración con la API de Open-Meteo",
+                "Cómo está estructurado el proyecto por React + Vite + Tailwind",
+                "Cómo extender o personalizar la app (por ejemplo, añadir geolocalización)"
+            ] },
+
+            { "type": "heading", "text": "1. Clonar el proyecto" },
+            { "type": "paragraph", "text": "Primero, abre tu terminal y clona el repositorio:" },
+            { "type": "code", "language": "plaintext", "text": "git clone https://github.com/faidrn/foreweather.git\ncd foreweather" },
+            { "type": "paragraph", "text": "Esto descargará el código fuente en tu equipo." },
+            
+            { "type": "heading", "text": "2. Instalar dependencias y ejecutar" },
+            { "type": "paragraph", "text": "Asegúrate de tener instalado Node.js (v14+ recomendado). Luego instala las dependencias:" },
+            { "type": "code", "language": "plaintext", "text": "npm install" },
+            { "type": "paragraph", "text": "Y ejecuta el proyecto en modo desarrollo:" },
+            { "type": "code", "language": "plaintext", "text": "npm run dev" },
+            { "type": "paragraph", "text": "Esto levantará un servidor local (generalmente en http://localhost:5173) donde puedes ver tu app." },
+
+            { "type": "heading", "text": "3. ¿Cómo obtiene el clima la app?" },
+            { "type": "paragraph", "text": "Foreweather usa la API de Open-Meteo, un servicio gratuito de pronósticos meteorológicos que no requiere clave de API y ofrece datos en JSON sobre temperatura, viento, lluvia, etc." },
+
+            { "type": "subtitle", "text": "Ejemplo de llamada a la API" },
+            { "type": "paragraph", "text": "Una llamada típica para obtener datos del clima para unas coordenadas sería así:" },
+            { "type": "code", "language": "plaintext", "text": "https://api.open-meteo.com/v1/forecast?\nlatitude=48.15&\nlongitude=17.12&\ncurrent_weather=true" },
+            { "type": "paragraph", "text": "La respuesta incluye datos como:" },
+            { "type": "list", "items": [
+                "Temperatura actual",
+                "Velocidad del viento",
+                "Estado del cielo",
+                "Datos horarios y diarios"
+            ] },
+            { "type": "paragraph", "text": "Esto permite mostrar interfaces ricas con clima en tiempo real y previsiones." },
+
+            { "type": "heading", "text": "4. Estructura del proyecto" },
+            { "type": "paragraph", "text": "Después de clonar el repo, verás archivos como:" },
+            { "type": "code", "language": "plaintext", "text": "foreweather/\n├── public/\n├── src/\n│   ├── components/\n│   ├── App.jsx\n│   └── index.jsx\n├── package.json\n├── tailwind.config.js\n├── vite.config.js\n└── README.md" },
+            { "type": "list", "items": [
+                "src/ – código fuente principal",
+                "App.jsx – componente raíz de React",
+                "components/ – componentes UI (por ejemplo, tarjeta de clima)",
+                "tailwind.config.js – configuración de estilos",
+                "vite.config.js – configuración del bundler Vite"
+            ] },
+
+            { "type": "heading", "text": "5. Cómo funciona el componente principal" },
+            { "type": "paragraph", "text": "Aunque el repo no mostró directamente el código en esta respuesta, la estructura típica con React + Open-Meteo implica:" },
+            { "type": "numbered-list", "items": [
+                "Solicitud de datos a la API con fetch() o axios",
+                "Guardar el resultado en un estado React (useState)",
+                "Mostrar el clima en componentes UI con datos como temperatura, viento, iconos, etc."
+            ] },
+            { "type": "paragraph", "text": "Ejemplo simplificado de un useEffect para llamar al API:" },
+            { "type": "code", "language": "jsx", "text": "useEffect(() => {\n  fetch(`https://api.open-meteo.com/v1/forecast?...`)\n    .then(res => res.json())\n    .then(data => setWeather(data.current_weather))\n}, [coords])" },
+
+            { "type": "heading", "text": "6. Cómo personalizar tu app" },
+            { "type": "subtitle", "text": "1. Añadir geolocalización" },
+            { "type": "paragraph", "text": "Puedes pedir permiso al navegador para detectar latitud y longitud:" },
+            { "type": "code", "language": "js", "text": "navigator.geolocation.getCurrentPosition(position => {\n  setCoords({\n    lat: position.coords.latitude,\n    lon: position.coords.longitude\n  });\n});" },
+            { "type": "paragraph", "text": "Esto permite mostrar el clima de la ubicación actual automáticamente." },
+
+            { "type": "subtitle", "text": "2. Mostrar pronósticos extendidos" },
+            { "type": "paragraph", "text": "Open-Meteo permite obtener predicción por horas o días:" },
+            { "type": "code", "language": "plaintext", "text": "hourly=temperature_2m,precipitation\ndaily=temperature_2m_max,temperature_2m_min" },
+            { "type": "paragraph", "text": "Esta información puedes mostrarla en gráficos o listas dentro de tu UI." },
+
+            { "type": "heading", "text": "7. Buenas prácticas para poner en producción" },
+            { "type": "paragraph", "text": "Cuando termines tu app y quieras desplegarla:" },
+            { "type": "paragraph", "text": "Genera una build optimizada:" },
+            { "type": "code", "language": "plaintext", "text": "npm run build" },
+            { "type": "paragraph", "text": "Sube la carpeta dist/ a tu servicio de hosting favorito (Netlify, Vercel, GitHub Pages)" },
+
+            { "type": "heading", "text": "Conclusión" },
+            { "type": "paragraph", "text": "Con Foreweather tienes una base sólida para tu blog o portfolio de desarrollador: una app moderna con React + Vite + Tailwind CSS alimentada por una API meteorológica real y gratuita.\n\nPuedes personalizarla aún más con funciones como:" },
+            { "type": "list", "items": [
+                "Cambio de unidades (°C ↔ °F)",
+                "Geolocalización automática",
+                "Gráficas animadas de pronóstico"
+            ] },
+
+            { "type": "link", "text": "Ver en GitHub", "href": "https://github.com/faidrn/foreweather" }
+        ]
+    },
   {
         "id": 2,
         "title": "Juego de la Serpiente en React - Tutorial",
