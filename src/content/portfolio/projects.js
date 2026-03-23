@@ -1,5 +1,21 @@
 export const projects = [
     {
+        id: 16,
+        en: {
+            title: 'Quality Management System (QMS) with Reactjs and Tailwind CSS',
+            description: 'Web application built with React and Vite that centralizes the key processes of a quality management system into a single platform.',
+        }, 
+        es: {
+            title: 'Sistema de Gestión de Calidad (QMS) con Reactjs y Tailwind CSS',
+            description: 'Aplicación web desarrollada con React y Vite que centraliza los procesos clave de un sistema de gestión de calidad en una sola plataforma.',
+        }, 
+        category: 'web',
+        image: '/images/portfolio/my-quality-system.webp',
+        tags: ['React.js', 'Vite', 'Tailwind CSS', 'JS'],
+        demoLink: '#',
+        codeLink: 'https://github.com/faidrn/my-quality-system',
+    },
+    {
         id: 15,
         en: {
             title: 'My Next.js E‑commerce with Next.js and Tailwind CSS',
