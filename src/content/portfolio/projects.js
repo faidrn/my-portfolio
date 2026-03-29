@@ -12,7 +12,7 @@ export const projects = [
         category: 'web',
         image: '/images/portfolio/my-quality-system.webp',
         tags: ['React.js', 'Vite', 'Tailwind CSS', 'JS'],
-        demoLink: '#',
+        demoLink: 'https://faidrn.github.io/my-quality-system/',
         codeLink: 'https://github.com/faidrn/my-quality-system',
     },
     {
