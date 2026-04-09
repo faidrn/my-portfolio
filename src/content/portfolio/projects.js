@@ -1,5 +1,21 @@
 export const projects = [
     {
+        id: 17,
+        en: {
+            title: 'HeaderLab',
+            description: 'HeaderLab is an experimental React playground focused on building, testing, and showcasing modern navigation headers.',
+        }, 
+        es: {
+            title: 'HeaderLab',
+            description: 'HeaderLab es un playground experimental de React enfocado en la construcción, prueba y exhibición de encabezados de navegación modernos.',
+        }, 
+        category: 'web',
+        image: '/images/portfolio/HeaderLab.webp',
+        tags: ['React.js', 'Vite', 'Tailwind CSS', 'JS'],
+        demoLink: '#',
+        codeLink: 'https://github.com/faidrn/HeaderLab',
+    },
+    {
         id: 16,
         en: {
             title: 'Quality Management System (QMS) with Reactjs and Tailwind CSS',
