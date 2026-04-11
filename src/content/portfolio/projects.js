@@ -12,7 +12,7 @@ export const projects = [
         category: 'web',
         image: '/images/portfolio/HeaderLab.webp',
         tags: ['React.js', 'Vite', 'Tailwind CSS', 'JS'],
-        demoLink: '#',
+        demoLink: 'https://headerlab.netlify.app/',
         codeLink: 'https://github.com/faidrn/HeaderLab',
     },
     {
